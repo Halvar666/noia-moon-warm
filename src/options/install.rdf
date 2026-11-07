@@ -17,7 +17,7 @@
     <em:optionsURL>chrome://noiawarmoptions/content/options.xul</em:optionsURL>
 
     <em:contributor>David Vincent</em:contributor>
-    <em:contributor>Halvar666: Noia Warm Moon adaptation</em:contributor>
+    <em:contributor>Halvar666: Noia Moon Warm adaptation</em:contributor>
 
     <em:targetApplication>
       <!-- Pale Moon -->

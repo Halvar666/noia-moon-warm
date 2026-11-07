@@ -1,8 +1,8 @@
 # Changelog
 
 ## Noia Moon Warm 1.0.0b1 — first public beta
-- **Released:** Complete theme as GitHub prerelease `theme-v1.0.0b1` (theme XPI only).
-- **Distribution:** Noia Moon Warm Options 1.0.0b1 is distributed separately through the forum, with a Pale Moon Add-ons listing planned later.
+- **Released:** Complete theme as GitHub prerelease `theme-v1.0.0b1`, with a separately downloadable Options XPI in Assets.
+- **Distribution:** Noia Moon Warm Options 1.0.0b1 is available as a second XPI asset in the same release. A forum attachment and Pale Moon Add-ons listing may follow.
 - **Preserved:** Theme and Options are independently installable; all existing identifiers and preferences remain unchanged.
 
 ## Options 2.1.2a9 — startup modernization and new icon (2026-11-07)

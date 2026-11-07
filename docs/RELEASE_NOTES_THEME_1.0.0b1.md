@@ -12,9 +12,9 @@ Noia Moon Warm is a warm-toned complete theme for **Pale Moon**, based on Noia M
 - Preserved accumulated toolbar, downloads, dialog, and Windows titlebar/maximization improvements.
 
 ## Installation
-Download **`Noia_Moon_Warm_1.0.0b1.xpi`**, install it in Pale Moon, activate the theme, and restart the browser.
+Under **Assets**, download **`Noia_Moon_Warm_1.0.0b1.xpi`**, install it in Pale Moon, activate the theme, and restart the browser.
 
-**Noia Moon Warm Options 1.0.0b1 is distributed separately on the forum and is not attached to this GitHub Release.** It may later be listed on the Pale Moon Add-ons site.
+**Optional:** download **`Noia_Moon_Warm_Options_1.0.0b1.xpi`** from the same **Assets** section to customize the theme. Options is an independent add-on and is not required for the theme to work. It may also be provided on the forum and later listed on the Pale Moon Add-ons site.
 
 Do not enable the original Noia Moon Options together with Noia Moon Warm Options: their global styles and overlay IDs may conflict. Both complete themes can remain installed; enable only the matching Options extension and restart when switching.
 

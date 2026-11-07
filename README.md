@@ -67,10 +67,10 @@ The unreferenced `nmoptions/icons/warm/jar-donor/` files have been removed from 
 
 ## Beta packaging note (2026-11-07)
 
-The **theme** is packaged as `Noia Moon Warm 1.0.0b1` with a new user-edited 64×64 Add-ons Manager icon and the exact supplied `preview.png`. Its stable installation ID (`noia-warm-moon@halvar666`) and skin internal name (`noiawarmmoon`) remain unchanged to preserve upgrades and compatibility. The separate **Options** add-on is now **Noia Moon Warm Options 1.0.0b1**, with an independently rewritten startup controller and a maintainer-approved icon; it is distributed separately on the forum and is not part of the theme's GitHub Release. Its compatibility warning about the original Noia Moon Options remains in effect. The theme is distributed as a GitHub prerelease; Options is distributed separately.
+The **theme** is packaged as `Noia Moon Warm 1.0.0b1` with a new user-edited 64×64 Add-ons Manager icon and the exact supplied `preview.png`. Its stable installation ID (`noia-warm-moon@halvar666`) and skin internal name (`noiawarmmoon`) remain unchanged to preserve upgrades and compatibility. The separate **Options** add-on is now **Noia Moon Warm Options 1.0.0b1**, with an independently rewritten startup controller and a maintainer-approved icon; it is offered as a separate optional XPI in the same GitHub Release Assets; it may also be shared on the forum and later published on the Pale Moon Add-ons site. Its compatibility warning about the original Noia Moon Options remains in effect. The theme is distributed as a GitHub prerelease; Options is distributed separately.
 
 ## Current source updates (2026-11-07)
 
 - **Theme 1.0.0b1:** Four 9×9 tree-expander arrows now use warm colors instead of the remaining blue tint; other theme artwork is unchanged.
 - **Options 1.0.0b1:** MPL-2.0 startup component, maintainer-selected 64×64 Add-ons Manager icon, unchanged preferences and registration, and retained warning not to run both Options extensions at once. The maintainer reported no visible regressions in Pale Moon 35 on Linux.
-- Builds remain separate XPI packages; the theme is the only XPI attached to the GitHub Release.
+- Builds remain separate XPI packages; the GitHub Release includes separate Theme and Options XPI assets.

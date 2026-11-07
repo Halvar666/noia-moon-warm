@@ -1,4 +1,4 @@
-name: Publish Noia Moon Warm Theme 1.0.0b1
+name: Publish Noia Moon Warm 1.0.0b1 assets
 on:
   push:
     branches:
@@ -15,20 +15,25 @@ jobs:
     steps:
       - name: Check out release sources
         uses: actions/checkout@v4
-      - name: Build the theme XPI
-        run: python3 scripts/build.py theme
-      - name: Verify the exact reviewed theme package
-        run: echo '6794b4a18e736c2d38e237fb02081b605876e3a229cdb93a4892c4fc43126302  dist/Noia_Moon_Warm_1.0.0b1.xpi' | sha256sum -c -
-      - name: Create GitHub prerelease (theme only)
+      - name: Test Options startup component
+        run: node tests/test_noiawarm_startup.js
+      - name: Build theme and Options XPI
+        run: python3 scripts/build.py all
+      - name: Verify exact reviewed release packages
+        run: |
+          echo '6794b4a18e736c2d38e237fb02081b605876e3a229cdb93a4892c4fc43126302  dist/Noia_Moon_Warm_1.0.0b1.xpi' | sha256sum -c -
+          echo 'd41b724ddec0ecb93c137a3187bf6348f6e2fc8e414c35d40d9ed5a04a1029d4  dist/Noia_Moon_Warm_Options_1.0.0b1.xpi' | sha256sum -c -
+      - name: Publish both XPI files in the existing prerelease
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           if gh release view theme-v1.0.0b1 >/dev/null 2>&1; then
-            echo 'Theme release already exists; not recreating.'
-            exit 0
+            gh release upload theme-v1.0.0b1 dist/Noia_Moon_Warm_Options_1.0.0b1.xpi --clobber
+            gh release edit theme-v1.0.0b1 --title 'Noia Moon Warm 1.0.0b1' --notes-file docs/RELEASE_NOTES_THEME_1.0.0b1.md
+          else
+            gh release create theme-v1.0.0b1 dist/Noia_Moon_Warm_1.0.0b1.xpi dist/Noia_Moon_Warm_Options_1.0.0b1.xpi \
+              --title 'Noia Moon Warm 1.0.0b1' \
+              --notes-file docs/RELEASE_NOTES_THEME_1.0.0b1.md \
+              --prerelease \
+              --target "$GITHUB_SHA"
           fi
-          gh release create theme-v1.0.0b1 dist/Noia_Moon_Warm_1.0.0b1.xpi \
-            --title 'Noia Moon Warm 1.0.0b1' \
-            --notes-file docs/RELEASE_NOTES_THEME_1.0.0b1.md \
-            --prerelease \
-            --target "$GITHUB_SHA"
