@@ -1,0 +1,63 @@
+:root {
+  --toolbarbutton-large-image: url(chrome://browser/skin/nmoptions/icons/warm/Toolbar-large.png) !important;
+  --toolbarbutton-small-image: url(chrome://browser/skin/nmoptions/icons/warm/Toolbar-small.png) !important;
+}
+
+#noiamoon-back-forward-dropmarker .toolbarbutton-menu-dropmarker {
+  list-style-image: url(chrome://global/skin/icons/dropmarker.png) !important;
+}
+
+toolbar[mode="text"] #noiamoon-back-forward-dropmarker .toolbarbutton-menu-dropmarker {
+  list-style-image: url(chrome://global/skin/arrow/arrow-dn.gif) !important;
+}
+
+toolbar[mode="text"] #noiamoon-back-forward-dropmarker[disabled="true"] .toolbarbutton-menu-dropmarker {
+  list-style-image: url(chrome://global/skin/arrow/arrow-dn-dis.gif) !important;
+}
+
+.home-arrow {
+  list-style-image: url(chrome://browser/skin/nmoptions/icons/warm/start.png) !important;
+}
+
+.end-arrow {
+  list-style-image: url(chrome://browser/skin/nmoptions/icons/warm/finish.png) !important;
+}
+
+.previous-arrow, .left-arrow {
+  list-style-image: url(chrome://browser/skin/nmoptions/icons/warm/back1.png) !important;
+}
+
+.next-arrow, .right-arrow {
+  list-style-image: url(chrome://browser/skin/nmoptions/icons/warm/forward1.png) !important;
+}
+
+#downloadView {
+  background-image: url(chrome://browser/skin/nmoptions/icons/warm/downloadsBG.png) !important;
+}
+  
+.downloadButton.downloadShow {
+  list-style-image: url("chrome://browser/skin/nmoptions/icons/warm/folder_closed.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+.downloadButton.downloadShow:hover {
+  list-style-image: url("chrome://browser/skin/nmoptions/icons/warm/folder_open.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+.downloadButton.downloadShow:active {
+  list-style-image: url("chrome://browser/skin/nmoptions/icons/warm/folder_closed.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+
+richlistitem[type="download"][state="1"]:hover > .downloadButton.downloadShow {
+  list-style-image: url("chrome://browser/skin/nmoptions/icons/warm/folder_closed.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+richlistitem[type="download"][state="1"]:hover > .downloadButton.downloadShow:hover {
+  list-style-image: url("chrome://browser/skin/nmoptions/icons/warm/folder_open.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+richlistitem[type="download"][state="1"]:hover > .downloadButton.downloadShow:active {
+  list-style-image: url("chrome://browser/skin/nmoptions/icons/warm/folder_closed.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}

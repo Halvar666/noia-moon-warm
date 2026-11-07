@@ -1,0 +1,8 @@
+#TabsToolbar:not([treestyletab-mode="vertical"]) .tabbrowser-tab {
+  border-radius: 15px !important;
+}
+
+#main-window[nmstrip="true"] #TabsToolbar:not([multibar]) .tabbrowser-tab,
+#TabsToolbar:not([multibar]) .tabbrowser-tab[style*="background-image"] {
+  border-radius: 15px !important;
+}

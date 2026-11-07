@@ -1,0 +1,169 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+toolbarbutton {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  color: #222;
+  padding: 2px;
+  background-color: transparent;
+}
+
+.toolbarbutton-icon {
+  margin-right: 2px;
+}
+
+.toolbarbutton-text {
+  margin: 0 !important;
+  text-align: center;
+}
+
+toolbarbutton.tabbable {
+  -moz-user-focus: normal !important;
+}
+
+toolbarbutton:hover,
+toolbarbutton[buttonover="true"] {
+  color: rgba(0,0,0,1);
+  text-shadow : 0 0 0 rgba(0,0,0,0.6);
+}
+
+toolbarbutton:hover:active,
+toolbarbutton[open="true"] {
+  color: #000;
+}
+
+toolbarbutton[disabled="true"],
+toolbarbutton[disabled="true"]:hover,
+toolbarbutton[disabled="true"]:hover:active,
+toolbarbutton[disabled="true"][open="true"] {
+  color: #808080;
+  text-shadow : none;
+}
+
+/* ..... checked state ..... */
+
+toolbarbutton[checked="true"],
+toolbarbutton[checked="true"]:hover,
+toolbarbutton[checked="true"]:hover:active,
+toolbarbutton[checked="true"][open="true"] {
+  color: #000000;
+}
+
+toolbarbutton:not(.toolbarbutton-1)[checked="true"] ,
+#console-toolbox > #ToolbarMode toolbarbutton:hover  {
+  background: url(chrome://global/skin/button/hover.png) repeat-x top left transparent;
+  color : #000;
+  border-radius : 3px;
+  box-shadow: none;
+  border : 2px solid;
+  -moz-border-top-colors: #404040 #fff;
+  -moz-border-right-colors: #404040 #9BB0D1;
+  -moz-border-bottom-colors: #404040 #9BB0D1;
+  -moz-border-left-colors: #404040 #fff;
+  padding-right : 0px !important;
+  padding-left : 0px !important;
+}
+
+toolbarbutton:-moz-lwtheme:not([disabled="true"]) {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+/* toolbarbutton menu */
+toolbarbutton:not(#appmenu-toolbar-button) .toolbarbutton-menu-dropmarker {
+  list-style-image:url("chrome://global/skin/icons/dropmarker.png");
+  -moz-image-region: auto;
+  margin-left: 1px;
+}
+
+toolbarbutton:not(#appmenu-toolbar-button) .toolbarbutton-menu-dropmarker > .dropmarker-icon {
+  width: 10px;
+}
+
+toolbarbutton:not(#appmenu-toolbar-button)[open="true"] .toolbarbutton-menu-dropmarker > .dropmarker-icon,
+toolbarbutton:not(#appmenu-toolbar-button):hover .toolbarbutton-menu-dropmarker > .dropmarker-icon {
+  filter: saturate(150%) brightness(110%);
+}
+
+.toolbarbutton-menu-dropmarker[disabled="true"] > .dropmarker-icon {
+  filter: grayscale(1);
+  opacity: .3;
+}
+
+/* toolbarbutton menu-button */
+toolbarbutton[type="menu-button"] {
+  -moz-box-orient: horizontal !important;
+  padding: 0 !important;
+}
+
+.toolbarbutton-menubutton-button {
+  -moz-appearance : none !important;
+  -moz-box-pack: center;
+  -moz-box-orient: vertical;
+  padding: 1px;
+}
+
+.toolbarbutton-menubutton-button:not([disabled="true"]):hover:active {
+  padding: 2px 0 0 2px;
+}
+
+/* ::::: toolbarbutton badged ::::: */
+
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
+  margin-inline-end: 0;
+}
+
+.toolbarbutton-badge {
+  background-color: #d90000;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 2px 1px;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 hsla(0, 100%, 100%, .2) inset,
+              0 -1px 0 hsla(0, 0%, 0%, .1) inset,
+              0 1px 0 hsla(206, 50%, 10%, .2);
+  margin: -6px 0 0 !important;
+  margin-inline-end: -8px !important;
+  min-width: 14px;
+  max-width: 28px;
+  line-height: 10px;
+  text-align: center;
+  -moz-stack-sizing: ignore;
+}
+
+/* dropmarker */
+.toolbarbutton-menubutton-dropmarker {
+  -moz-box-align: center;
+  list-style-image:url(chrome://global/skin/icons/dropmarker.png);
+  -moz-image-region: rect(0 10px 10px 0);
+}
+
+.toolbarbutton-menubutton-dropmarker[checked="true"],
+.toolbarbutton-menubutton-dropmarker:hover,
+.toolbarbutton-menubutton-dropmarker[open="true"]:hover,
+toolbarbutton:hover > stack > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[open="true"] > stack > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"][open="true"] > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[type="menu-button"]:hover > .toolbarbutton-menubutton-dropmarker {
+  -moz-image-region: rect(10px 10px 20px 0);
+}
+
+toolbarbutton[disabled="true"] > stack > .toolbarbutton-menubutton-dropmarker,
+toolbarbutton[disabled="true"]:hover > stack > .toolbarbutton-menubutton-dropmarker,
+.toolbarbutton-menubutton-dropmarker[disabled="true"] {
+  -moz-image-region: rect(20px 10px 30px 0) !important;
+}
+
+toolbar[mode="icons"] .toolbarbutton-text,
+toolbar[mode="text"] .toolbarbutton-icon {
+  display: none;
+}
+
+toolbar[mode="text"] .toolbarbutton-text {
+  margin: 0 3px !important;
+  vertical-align: middle;
+}
+
+
+

@@ -1,0 +1,18 @@
+Noia Warm Moon Options 2.1.2a8 (pre-beta test)
+
+Changes from a7:
+- Temporary compatibility warning shown on the Main tab.
+- Add-ons Manager description warns against enabling both Options extensions.
+- No functional change to preferences, startup, CSS or JS.
+
+Both Noia Moon and Noia Warm Moon COMPLETE THEMES can be installed at the same time.
+Only one of the two OPTIONS extensions should be enabled at a time:
+  Noia Moon active -> Noia Moon Options enabled, Noia Warm Moon Options disabled.
+  Noia Warm Moon active -> Noia Warm Moon Options enabled, Noia Moon Options disabled.
+Restart Pale Moon after changing the active theme or enabled Options extension.
+
+Technical reasons: duplicated overlay control IDs and global AGENT CSS sheets from
+original Noia Moon Options without selected-skin guard. The warm fork has separate
+extension ID/preferences/chrome namespace, but cannot suppress CSS from the original.
+
+Theme a74 remains unchanged.

@@ -1,0 +1,217 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url(chrome://global/skin/filefield.css);
+
+/* Global Styles */
+radio[pane=paneMain] {
+  list-style-image: url(chrome://browser/skin/preferences/main.png) !important;
+}
+
+radio[pane=panePrivacy] {
+  list-style-image: url(chrome://browser/skin/preferences/privacy.png) !important;
+}
+
+radio[pane=paneContent] {
+  list-style-image: url(chrome://browser/skin/preferences/content.png) !important;
+}
+
+radio[pane=paneTabs] {
+  list-style-image: url(chrome://browser/skin/preferences/tabs.png) !important;
+}
+
+radio[pane=paneAdvanced] {
+  list-style-image: url(chrome://browser/skin/preferences/advanced.png) !important;
+}
+
+radio[pane=paneApplications] {
+  list-style-image: url(chrome://browser/skin/preferences/applications.png) !important;
+}
+
+radio[pane=paneSecurity] {
+  list-style-image: url(chrome://browser/skin/preferences/security.png) !important;
+}
+
+radio[pane=paneSync] {
+  list-style-image: url(chrome://browser/skin/preferences/sync.png) !important;
+}
+
+prefpane {
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+.prefWindow-dlgbuttons {
+  padding-bottom: 5px;
+}
+
+/* Applications Pane */
+
+#paneApplications {
+  padding: 8px 0 0;
+}
+
+#paneApplications #filter {
+  margin: 2px 8px;
+}
+
+#BrowserPreferences[animated=true] #handlersView {
+  height: 25em;
+}
+
+#BrowserPreferences[animated="false"] #handlersView {
+  -moz-box-flex: 1;
+}
+
+#clearCacheButton {
+  list-style-image: url(chrome://global/skin/CuteMenus/Cleanup.png);
+}
+
+.inline-link {
+  cursor: pointer;
+  color: #98332F;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  color: #c6524b;
+  text-decoration: underline;
+}
+
+.inline-link:active {
+  color: #6e1f1c;
+}
+
+/* Modeless Window Dialogs */
+.windowDialog,
+.windowDialog prefpane {
+  padding: 0;
+  background: #ffffe6;
+}
+
+.contentPane {
+  margin: 9px 8px 5px;
+}
+
+.actionButtons {
+  margin: 0 3px 6px !important;
+}
+
+/* Cookies Manager */
+
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  list-style-image: url(chrome://global/skin/CuteMenus/source.png) !important;
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  list-style-image: url(chrome://browser/skin/places/folder_closed.png);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container, open) {
+  list-style-image: url(chrome://browser/skin/places/folder_open.png);
+}
+
+#cookieInfoBox {
+  border: 1px solid #A0A0A0;
+  border-radius: 0;
+  margin: 4px;
+  padding: 0;
+}
+
+/* Sync Pane */
+#syncDesc {
+  padding: 0 12em;
+}
+
+.syncGroupBox {
+  padding: 10px;
+}
+
+#accountCaptionImage {
+  margin-right: 2px;
+  list-style-image: url(chrome://mozapps/skin/profile/profileicon.png);
+}
+
+#syncAddDeviceLabel {
+  margin-top: 1em;
+  margin-bottom: 1em;
+ }
+
+#syncEnginesList {
+  height: 11em;
+}
+
+/* Advanced Pane */
+#advancedPrefs {
+  padding-bottom: 8px;
+}
+
+.bottomBox {
+  padding-bottom: 2px;
+}
+
+
+prefwindow .paneSelector,
+.paneSelector,
+radio[pane],
+#BrowserPreferences > hbox:first-child,
+#MainPane > hbox:first-child,
+#TabsPane > hbox:first-child,
+#ContentPane > hbox:first-child,
+#ApplicationsPane > hbox:first-child,
+#PrivacyPane > hbox:first-child,
+#SecurityPane > hbox:first-child,
+#AdvancedPane > hbox:first-child,
+#SyncPane > hbox:first-child,
+caption,
+groupbox > caption {
+  background: linear-gradient(rgb(255, 248, 230), rgb(216, 190, 134)) !important;
+  background-image: linear-gradient(rgb(255, 248, 230), rgb(216, 190, 134)) !important;
+  background-color: #d8be86 !important;
+}
+
+
+
+prefwindow,
+prefwindow[type="child"],
+prefpane,
+prefpane > .content-box,
+.prefWindow-dlgbuttons,
+.contentPane,
+.windowDialog,
+.windowDialog prefpane {
+  background: #ffffe6 !important;
+  background-color: #ffffe6 !important;
+  background-image: none !important;
+}
+
+
+
+#permissions-box,
+#sites-box,
+#cookies-box,
+#permissions-content,
+#permissions-header,
+#header-deck,
+#downloadsGroup,
+#systemDefaultsGroup,
+#startupGroup,
+#status4evar-prefs,
+#status4evar-prefs > prefpane,
+#status4evar-prefs > prefpane > vbox,
+#mainPrefPane,
+#paneMain,
+#paneTabs,
+#paneContent,
+#paneApplications,
+#panePrivacy,
+#paneSecurity,
+#paneSync,
+#paneAdvanced {
+  background-color: #ffffe6 !important;
+  background-image: none !important;
+}

@@ -1,0 +1,10 @@
+skin	browser	noiawarmmoon	chrome/browser/
+skin	communicator	noiawarmmoon	chrome/communicator/
+skin	global	noiawarmmoon	chrome/global/
+skin	mozapps	noiawarmmoon	chrome/mozapps/
+
+skin	os	noiawarmmoon	chrome/os/linux/
+skin	os	noiawarmmoon	chrome/os/darwin/	os=Darwin
+skin	os	noiawarmmoon	chrome/os/winnt/	os=WINNT
+
+override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css

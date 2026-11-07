@@ -1,0 +1,328 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@import url(chrome://os/skin/organizer.css);
+ 
+/* Toolbar */
+#placesToolbox {
+  border-bottom: 0;
+}
+
+#placesToolbar {
+  background: url(chrome://global/skin/toolbar/Toolbar-Background.png) top left repeat-x #ffffe6;
+  padding-right: 2px;
+  border: 0;
+}
+
+#placesToolbar #back-button {
+  list-style-image: url("chrome://browser/skin/back-small.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#placesToolbar #back-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+#placesToolbar #back-button[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px);
+}
+#placesToolbar #forward-button  {
+  list-style-image: url("chrome://browser/skin/forward-small.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#placesToolbar #forward-button:not([disabled="true"]):hover {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+#placesToolbar #forward-button[disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px);
+}
+
+#placesToolbar  #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#placesToolbar  #forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  transform: scaleX(-1);
+}
+
+/* Menu */
+
+#placesMenu {  
+  background: transparent;
+  border-style: none;
+}
+
+#placesMenu > menu {
+  margin: 0 5px;
+  padding: 2px;
+}
+
+#placesMenu > menu[_moz-menuactive="true"],
+#placesMenu > menu:hover,
+#placesMenu > menu[open="true"]  {
+  background: url(chrome://global/skin/button/hover.png) repeat-x top left transparent;
+  color : #000;
+  border-radius : 2px ;
+  border : 1px solid transparent;
+  box-shadow : 0 0 0 1px #555; 
+}
+
+#placesMenu > menu > .menubar-text {
+  padding-inline-end: 13px;
+  background: url(chrome://global/skin/arrow/arrow-dn.gif) right center no-repeat;
+}
+
+#placesMenu > menu > .menubar-text:-moz-locale-dir(rtl) {
+  background-position: left;
+}
+
+/* Toolbar buttons */
+#organizeButton {
+  list-style-image: url(chrome://global/skin/CuteMenus/wizard.png);
+}
+#viewMenu {
+  list-style-image: url(chrome://global/skin/CuteMenus/view_detailed.png);
+}
+#maintenanceButton {
+  list-style-image: url(chrome://global/skin/CuteMenus/filesave.png);
+}
+
+menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"] {
+  list-style-image: url(chrome://browser/skin/places/calendar.png);
+}
+
+/* Root View */
+#placesView {
+  background-color: #ffffe6;
+}
+
+/* Place List, Place Content */
+.placesTree {
+  margin: 0;
+}
+
+#placesList {
+  background-color: #ffffe6;
+}
+
+#placeContent {
+  border: 0;
+  background-color: #ffffe6;
+}
+
+#contentView {
+  margin: 0;
+  border-top: 0px groove #fff;
+}
+
+#placesView > splitter {
+  border: 0;
+  border-inline-end: 1px solid #a0a0a0;
+  min-width: 0;
+  width: 3px;
+  background-color: transparent;
+  margin-inline-start: -2px;
+  position: relative;
+}
+
+#infoPaneBox ,
+#detailsDeck {
+  padding: 5px;
+  background: #ffffe6;
+}
+
+#detailsDeck {
+  border-top: 1px solid #a0a0a0;
+}
+
+/* Search Bar */
+#searchbar {
+  margin: 6px -4px 0 2px;
+}
+
+#searchFilter {
+  margin: 2px 0 2px 5px;
+}
+
+.textbox-input-closebutton {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 0;
+  list-style-image: url(chrome://global/skin/icons/close.png);
+  -moz-image-region: rect(0 16px 16px 0);
+  background: none;
+  cursor: default;
+}
+
+.textbox-input-closebutton:hover {
+  -moz-image-region: rect(0 32px 16px 16px);
+  background: none;
+}
+
+.textbox-input-closebutton:hover:active {
+  -moz-image-region: rect(0 48px 16px 32px);
+  background: none;
+}
+
+.small {
+  margin: 0 1px;
+}
+
+#defaultView {
+  background-color: #ffffe6;
+}
+
+#infoBoxExpanderLabel {
+  margin: 0;
+  padding: 5px;
+}
+
+#organizerScopeBar {
+  padding-right: 3px;
+  border: 0;
+  background: url(chrome://browser/skin/Title-Background.png) top left repeat-x #fff8e6;
+}
+
+#organizerScopeBar > toolbarbutton {
+  padding: 3px 5px !important;
+}
+
+#organizerScopeBar > toolbarbutton:not([checked="true"]):hover {
+  background: url(chrome://global/skin/button/hover.png) repeat-x top left transparent ;
+  color : #000 !important;
+  border-radius : 2px ;
+  box-shadow : 0 0 0 1px #555 !important;  
+}
+
+
+#organizerScopeBar > toolbarbutton[checked="true"]  {
+    background: url(chrome://global/skin/button/hover.png) repeat-x top left transparent ;
+  color : #000 !important;
+  border :none !important;
+  border-radius : 2px ;
+  box-shadow : 0 0 0 1px #000 !important;
+}
+
+
+#organizerScopeBar > #saveSearch {
+  margin: 1px 2px;
+  padding: 0 3px;
+}
+
+#scopeBarTitle {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* info pane */
+
+#detailsDeck .textbox-input {
+  min-height: 17px;
+  padding-top: 0px;
+}
+
+#previewBox {
+  border-right: 1px solid #404040 !important;
+}
+
+#itemsCountText,
+#selectItemDescription {
+  color: #808080;
+}
+
+.no-margin-button {
+  min-width: 0em;
+}
+
+
+/**
+ * Downloads pane
+ */
+
+#clearDownloadsButton > .toolbarbutton-icon {
+  display: none;
+}
+
+#clearDownloadsButton {
+  padding-inline-start: 9px;
+  padding-inline-end: 9px;
+}
+
+#placesToolbar > toolbarbutton:not([disabled="true"]):not([checked="true"]):not(#back-button):not(#forward-button):hover {
+  background: url(chrome://global/skin/button/hover.png) repeat-x top left transparent ;
+  color : #000 !important;
+  border-radius : 2px ;
+  box-shadow : 0 0 0 1px #555 !important;  
+}
+
+
+#placesToolbar,
+#placesMenu,
+#placesToolbox,
+#organizerScopeBar,
+#detailsDeck > hbox:first-child,
+treecols,
+treecol {
+  background: linear-gradient(rgb(255, 248, 230), rgb(216, 190, 134)) !important;
+  background-image: linear-gradient(rgb(255, 248, 230), rgb(216, 190, 134)) !important;
+  background-color: #d8be86 !important;
+}
+
+
+
+#searchbar,
+#searchFilter,
+#detailsDeck textbox,
+#detailsDeck .textbox-input,
+#sidebar-search-container textbox,
+#search-box {
+  background-color: #ffffe6 !important;
+  color: #000 !important;
+}
+
+
+
+#placesList treechildren::-moz-tree-row,
+#placeContent treechildren::-moz-tree-row,
+#placesView treechildren::-moz-tree-row {
+  background-color: #ffffe6 !important;
+}
+
+#placesList treechildren::-moz-tree-row(hover),
+#placeContent treechildren::-moz-tree-row(hover),
+#placesView treechildren::-moz-tree-row(hover) {
+  background-color: #f7efd0 !important;
+  border: 1px solid transparent !important;
+}
+
+#placesList treechildren::-moz-tree-row(selected),
+#placesList treechildren::-moz-tree-row(current, selected),
+#placesList treechildren::-moz-tree-row(hover, selected),
+#placeContent treechildren::-moz-tree-row(selected),
+#placeContent treechildren::-moz-tree-row(current, selected),
+#placeContent treechildren::-moz-tree-row(hover, selected),
+#placesView treechildren::-moz-tree-row(selected),
+#placesView treechildren::-moz-tree-row(current, selected),
+#placesView treechildren::-moz-tree-row(hover, selected) {
+  background-color: #f4e7bc !important;
+  border: 1px solid #caa24b !important;
+}
+
+#placesList treechildren::-moz-tree-cell-text(selected),
+#placesList treechildren::-moz-tree-cell-text(current, selected),
+#placesList treechildren::-moz-tree-cell-text(hover, selected),
+#placeContent treechildren::-moz-tree-cell-text(selected),
+#placeContent treechildren::-moz-tree-cell-text(current, selected),
+#placeContent treechildren::-moz-tree-cell-text(hover, selected),
+#placesView treechildren::-moz-tree-cell-text(selected),
+#placesView treechildren::-moz-tree-cell-text(current, selected),
+#placesView treechildren::-moz-tree-cell-text(hover, selected) {
+  color: #000 !important;
+}
+
+
+#placesList treechildren::-moz-tree-image(title, container),
+#placeContent treechildren::-moz-tree-image(title, container) {
+  list-style-image: url("chrome://browser/skin/places/folder_closed.png") !important;
+}
+#placesList treechildren::-moz-tree-image(title, open),
+#placeContent treechildren::-moz-tree-image(title, open) {
+  list-style-image: url("chrome://browser/skin/places/folder_open.png") !important;
+}

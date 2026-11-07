@@ -1,0 +1,11 @@
+content   noiawarmoptions                 chrome/content/
+skin      noiawarmoptions   classic/1.0   chrome/skin/
+locale    noiawarmoptions   en-US         chrome/locale/en-US/
+
+overlay chrome://browser/content/browser.xul		chrome://noiawarmoptions/content/overlay.xul
+style   chrome://global/content/customizeToolbar.xul	chrome://noiawarmoptions/skin/overlay.css
+
+#startup stuff
+component   {a84d3ac0-28d7-4f39-b035-561b70bf6b90} chrome/components/noiamoonop.js
+contract    @nwmoptions.ext/startup;1 {a84d3ac0-28d7-4f39-b035-561b70bf6b90}
+category    profile-after-change nwmStartup @nwmoptions.ext/startup;1

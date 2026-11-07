@@ -1,0 +1,16 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* Noia Warm Moon Black: Linux/GTK-specific readability fixes.
+ * The Noia preference category buttons remain warm GOLD even in Black. */
+#BrowserPreferences .paneSelector radio[pane]:not([selected="true"]):not([selected]):not(:hover),
+#BrowserPreferences .paneSelector radio[pane]:not([selected="true"]):not([selected]):not(:hover) > .paneButtonLabel {
+  color: #241b12 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+/* Keep the Noia appmenu control visible on the new dark tab toolbar. */
+#main-window:not(:-moz-lwtheme) #appmenu-toolbar-button,
+#main-window:not(:-moz-lwtheme) #appmenu-toolbar-button > .toolbarbutton-text,
+#main-window:not(:-moz-lwtheme) #appmenu-toolbar-button .toolbarbutton-text {
+  color: #f1f1f1 !important;
+  text-shadow: 0 1px 1px #101010 !important;
+}

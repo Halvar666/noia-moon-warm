@@ -1,0 +1,10 @@
+#main-window:not(:-moz-lwtheme):not([tabsintitlebar]) {
+  -moz-appearance:-moz-win-borderless-glass;
+  background-image: url("chrome://browser/skin/tabbrowser/Tabbar-background-top.png") !important;
+
+}
+
+#main-window:not(:-moz-lwtheme)[nmnoline="false"] #navigator-toolbox {
+  border-top: 0px solid #808080 !important;
+}
+

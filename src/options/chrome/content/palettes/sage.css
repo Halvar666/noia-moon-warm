@@ -1,0 +1,23 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* Noia Warm Moon Options a3 / sage: optional, opt-in palette only. */
+#main-window:not(:-moz-lwtheme),
+#main-window:not(:-moz-lwtheme) #navigator-toolbox,
+#main-window:not(:-moz-lwtheme) #toolbar-menubar,
+#main-window:not(:-moz-lwtheme) #TabsToolbar,
+#main-window:not(:-moz-lwtheme) #nav-bar,
+#main-window:not(:-moz-lwtheme) #PersonalToolbar,
+#main-window:not(:-moz-lwtheme) #addon-bar,
+#main-window:not(:-moz-lwtheme) #browser-bottombox {
+  background-color: #bbd7b0 !important;
+  background-image: linear-gradient(#f1faed, #bbd7b0) !important;
+}
+#main-window:not(:-moz-lwtheme) #appmenu-toolbar-button {
+  --appmenu-background-color: #598d58 !important;
+  --appmenu-border-color: #37723d !important;
+}
+#main-window:not(:-moz-lwtheme) #appmenu-toolbar-button:hover {
+  --appmenu-background-color: #dbe9d3 !important;
+}
+#main-window:not(:-moz-lwtheme) #appmenu-toolbar-button[open="true"] {
+  --appmenu-background-color: #37723d !important;
+}

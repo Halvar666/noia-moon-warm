@@ -1,0 +1,369 @@
+Noia Warm Moon 2.6.0a1 test build
+==================================
+
+This is an experimental Pale Moon complete theme fork prepared from Noia Moon 2.6.0.
+
+Base theme:
+- Noia Moon 2.6.0 by Lootyhoof
+- Noia Fox by David Vincent
+- Noia icon set by Carlitus
+
+Warm icon donor used for this test build:
+- Noia Warm icons by Carlitus
+- GNOME port by Vyacheslav Dikonov, according to the included ChangeLog from the NoiaWarm archive
+
+Changes in a1:
+- New theme id: noia-warm-moon@halvar666
+- New internal skin name: noiawarmmoon
+- Enabled Noia Moon warm icon option as default
+- Rebuilt main browser toolbar sprites from Noia Warm stock icons where possible
+- Replaced selected Places, menu, alert/dialog and preference icons with Noia Warm variants
+- Added mild warm beige/brown chrome palette overrides
+
+Licensing note:
+The uploaded NoiaWarm archive did not include a standalone LICENSE/COPYING file. Treat this as a test build until original license files are attached/verified for public release.
+
+
+Toolbar sprite update for a2:
+Large/small toolbar sprites rebuilt from extracted NoiaWarm.wba WindowBlinds toolbar icons.
+- back: InternetLarge_01 / InternetSmall_01
+- forward: InternetLarge_02 / InternetSmall_02
+- stop: InternetLarge_03 / InternetSmall_03
+- reload: InternetLarge_04 / InternetSmall_04
+- home: InternetLarge_05 / InternetSmall_05
+- downloads: InternetLarge_10 / InternetSmall_10
+- history: InternetLarge_16 / InternetSmall_16
+- bookmarks: ExplorerLarge_46 / ExplorerSmall_46
+- print: InternetLarge_15 / InternetSmall_15
+- new-tab: ExplorerLarge_04 / ExplorerSmall_04
+- new-window: ExplorerLarge_36 / ExplorerSmall_36
+- cut: ExplorerLarge_06 / ExplorerSmall_06
+- copy: ExplorerLarge_05 / ExplorerSmall_05
+- paste: ExplorerLarge_07 / ExplorerSmall_07
+- fullscreen: ExplorerLarge_37 / ExplorerSmall_37
+- zoom-in: ExplorerLarge_19 / ExplorerSmall_19
+- zoom-out: ExplorerLarge_18 / ExplorerSmall_18
+- feed: InternetLarge_12 / InternetSmall_12
+- sync: ExtrasLarge_05 / ExtrasSmall_05
+
+
+Toolbar sprite update for a3:
+Primary browser toolbar icons rebuilt from classic Noia-Warm.jar Phoenix/Firefox theme assets.
+Jar-derived buttons: back, forward, stop, reload, home, downloads, history, bookmarks, print, new-tab, new-window.
+Missing modern buttons kept from NoiaWarm.wba extraction: cut, copy, paste, fullscreen, zoom-in, zoom-out, feed, sync.
+Original individual JAR toolbar assets are stored under chrome/browser/nmoptions/icons/warm/jar-donor/ for inspection.
+
+
+a4 toolbar scale correction:
+Large toolbar source icons from Noia-Warm.jar are max 32x32; small source icons are max 24x24.
+Noia Moon skeleton expects 64x64 sprite regions for large mode and 48x48 regions for small mode; CSS then displays them at about 32px/24px.
+a4 upscales normal toolbar art to 60px within 64px cells and 46px within 48px cells to match Noia Moon visual size.
+
+
+2.6.0a5 changes:
+- Replaced toolbar History icon with custom Noia Warm red twin-bell alarm clock icon.
+- Maximized all main toolbar icons in large and small sprites to fill the full available button image region.
+
+
+2.6.0a6 changes:
+- Replaced the History toolbar icon with the user-adjusted red alarm clock image.
+
+
+2.6.0a7 changes:
+- Fixed History icon transparency by clearing the original sprite slot before inserting the custom transparent icon.
+- Replaced Bookmarks icon with the user-provided red-gold ribbon/star icon.
+
+
+2.6.0a8 changes:
+- Implemented the revised alarm-clock History icon with smaller, tighter bells.
+
+
+2.6.0a9 changes:
+- Set nav-bar underlay/background to #ffffe6.
+
+
+2.6.0a10 changes:
+- Set active tab color to #cc2900.
+
+
+2.6.0a11 changes:
+- Changed active tab color from #cc2900 to #98332F / rgb(152,51,47).
+
+
+2.6.0a12 changes:
+- Changed the global browser-window underlay color to #ffffe6 across CSS files.
+- This includes Add-ons Manager and other browser dialogs/windows that previously used #DADCE4 / #dadce4.
+- Replacements performed: 60 occurrences across 29 CSS files.
+
+
+2.6.0a13 changes:
+- Added hard Add-ons Manager warm background override for #ffffe6.
+- Targets Add-ons Manager own containers, views, categories, addon list items, and selected list rows.
+
+
+2.6.0a14 changes:
+- Added global warm header gradient: linear-gradient(rgb(255, 248, 230), rgb(216, 190, 134)).
+- Applied it to browser/sidebar/toolbars, Add-ons Manager headers, Preferences/Page Info/Places/dialog/wizard header areas.
+
+
+2.6.0a15 changes:
+- Fixed the gray second part of the App Menu by explicitly styling #appmenuSecondaryPane.
+- Set #appmenuSecondaryPane and immediate child containers to #ffffe6.
+
+
+2.6.0a16 changes:
+- Added a warm sidebar underlay (#ffffe6) for the Bookmarks/History sidebar body.
+- Styled page#bookmarksPanel, page#history-panel, places trees, search container and search box.
+- Added warm hover/selected row colors for sidebar places trees.
+
+
+2.6.0a17 changes:
+- Recolored scrollbar thumb and end-cap images from the provided blue references to a warm Noia palette derived from #ffffe6.
+- Replaced chrome/global/scrollbar/thumb-vertical.png, thumb-horizontal.png, thumb-endcap.png, thumb-bottomcap.png.
+- Replaced chrome/global/scale/scalethumb-horizontal.png and scalethumb-vertical.png with matching warm variants.
+
+
+2.6.0a22 changes:
+- Based on a17; discarded a18/a19/a20/a21 scrollbar CSS experiments.
+- Recolored track-horizontal.png and track-vertical.png from the uploaded track assets to the warm #ffffe6-based palette.
+- Also replaced corner.png with #ffffe6 to avoid a gray scrollbar intersection square.
+- Note: track-horizontal.png is 2x13 and repeats on X; track-vertical.png is 13x2 and repeats on Y, so their names are correct.
+
+
+2.6.0a23 changes:
+- Recolored textboxes globally to the Noia Warm #ffffe6 base.
+- Added warm focused textbox background (#fff8e6) and warm borders.
+- Covered global XUL textbox, autocomplete popups, in-content inputs, browser URL/search/find fields, Places search fields and Add-ons Manager search/text fields.
+
+
+2.6.0a24 changes:
+- Recolored chrome/global/icons/tab-hover.png from blue to a light warm red hover gradient.
+- The red hover color is intentionally lighter than the active tab color #98332F.
+
+
+2.6.0a25 changes:
+- Recolored the actual browser inactive-tab hover image chrome/browser/places/Bookmark-background.png from blue to light warm red.
+- Added browser-tab-specific non-selected hover border override to remove remaining blue hover border colors.
+- Kept a24 global tab-hover.png change for non-browser tab widgets.
+
+
+2.6.0a26 changes:
+- Recolored global button hover assets to the same light warm red palette used for tab hovers.
+- Replaced chrome/global/button/body-hover.png and chrome/global/button/hover.png.
+- Replaced blue fallback hover colors (#b8e9fe / rgba(188,245,254,201)) with warm red equivalents.
+- Added an explicit warm hover/active override for in-content buttons, selects, XUL buttons and menulists.
+
+
+2.6.0a27 changes:
+- Updated Pale Moon compatibility for the 35.x series (tested target: Pale Moon 35.0.1).
+- install.rdf maxVersion changed from 34.* to 35.*.
+- Includes all a26 warm button-hover changes.
+
+
+2.6.0a28 changes:
+- Recolored remaining gray dialog/window content backgrounds to the Noia Warm light yellow (#ffffe6).
+- Applied warm backgrounds to global groupboxes, prefwindow/prefpane content, in-content page roots/main-content, and status/preferences dialog content panes.
+- This specifically targets the gray panels seen in Preferences, Status Bar Preferences, and similar windows.
+
+
+2.6.0a29 changes:
+- Recolored remaining gray default buttons to the Noia Warm yellow/beige palette.
+- Recolored button focus/default states to warm gold and pressed state to warm red.
+- Recolored global checkbox and radio bitmap assets: neutral frames are warm beige, blue/cyan checked/focus accents are warm red.
+- Recolored in-content checkbox/radio SVG accents from blue to #98332F / #ae3e38.
+
+
+2.6.0a31 changes:
+- Reworked groupbox framing to match Noia Moon 2.6.1 exactly in structure.
+- Replaced chrome/global/groupbox.css with the Noia Moon 2.6.1 version and only swapped colors to the warm palette.
+- Warm color mapping used: #949494 -> #b89b55, #fff -> #fff8e6, #D3D6DE -> #ffffe6.
+- Removed extra groupbox-specific in-content overrides so Pale Moon 35.x follows the same simpler Noia Moon approach.
+
+
+2.6.0a32 changes:
+- Kept the Noia Moon 2.6.1 groupbox geometry, but adjusted the warm border palette for better depth on #ffffe6.
+- Darkened the left/top edges and changed the right/bottom edges from near-white to visible warm gold shades.
+- Made .groupbox-title slightly darker (#f2e7bf) than the groupbox body to restore the subtle raised/plastic effect.
+
+
+2.6.0a33 changes:
+- Recolored inline and in-content links from blue to the warm red palette.
+- Link colors: normal #98332F, hover #c6524b, active #6e1f1c, visited #7d4743.
+- Recolored progress.gif and busy.gif from blue/beige to the same warm red scale.
+- Kept the existing pale-yellow progress track/background.
+
+
+2.6.0a34 changes:
+- First blue/gray cleanup pass after the a33 audit.
+- Recolored menubar hover/open states and popup-menu hover from Noia blue to the existing warm red hover palette.
+- Recolored menu checkbox/radio checked indicators and removed blue menu-radio hover pixels.
+- Cleaned remaining blue/cyan pixels from global checkbox and radio bitmap states.
+- Reworked tree/listbox backgrounds: warm #ffffe6 base, warm beige hover, warm red focused selection.
+- Recolored tree/listbox header normal/hover/active images and hover twisties to the warm palette.
+
+
+2.6.0a35 changes:
+- Follow-up cleanup for a34: removed residual dark-blue and anti-aliased blue pixels from global checkbox/radio states.
+- Cleaned the same residual blue from menu checkbox/radio assets.
+- Neutral black outlines/check marks remain unchanged; only blue-dominant pixels were remapped to the warm red palette.
+
+
+2.6.0a36 changes:
+- Added six user-supplied custom icons for the Pale Moon Permissions Manager.
+- New icons: popup, image, geo, cookie, install, desktop-notification.
+- Replaced the six corresponding .pref-icon[type] list-style-image paths only.
+- Converted open popup windows.ico to RGBA PNG; kept original 48x48 icon artwork and existing 36x36 display rule.
+- Retained the existing password, plugins, indexedDB, fullscreen, and pointerLock icons.
+
+
+2.6.0a37 changes:
+- Replaced six Pale Moon Preferences category icons using user-supplied, explicitly named artwork.
+- general.png -> preferences/main.png; tabs.png -> tabs.png; content.png -> content.png.
+- applications.ico -> applications.png; privacy.png -> privacy.png; security.png -> security.png.
+- Resampled input 48x48 artwork to the existing 32x32 PNG dimensions without redesign or recoloring.
+- Kept Advanced and Sync unchanged.
+
+
+2.6.0a38 changes:
+- Added dedicated Status4Evar preferences icons for Progress, Download, and Status Bar.
+- Progress uses a new Noia Warm speedometer icon.
+- Download uses the user-provided new download icon.
+- Status Bar uses a new Noia Warm glossy status panel icon.
+- Status and Advanced remain unchanged.
+
+
+2.6.0a40 changes:
+- Fixed the custom Progress and Status Bar icons being too small in the Status4Evar preferences window.
+- Cropped source art using an alpha threshold to ignore faint transparent margins before scaling.
+- Download, Status, and Advanced remain unchanged.
+
+
+2.6.0a41 changes:
+- Replaced Page Info General, Media, Permissions and Security icons with user-supplied 48x48 images, resized to native 32x32.
+- Added separate assets under chrome/browser/pageinfo/icons to avoid changes in shared Preferences/Extensions icons.
+- Updated normal/hover/selected Page Info tab icons only; Feeds and all other icons unchanged.
+
+
+2.6.0a42 changes:
+- Converted seven shared gray-gradient assets to warm yellow/gold while preserving original geometry/shading: Tool-background2, Toolbar-Background, Title-Background, box-background, menuback, menubackrtl, Statusbar-background.
+- Fixed the gray footer in Sync Setup, keeping the new warm bitmap.
+- Repaired malformed a28 in-content CSS rules in inContentUI.css and in-content/common.css (without changing XUL groupbox geometry).
+- Warmed Library/Places backdrops, Page Info list fills, Add-ons Manager source gradients/alert/progress track, tooltips, Sync Tabs, and Clear History warning.
+- Warmed selected download row image without touching download artwork, and fixed its fallback text color.
+- Kept previous user-supplied icons unchanged; only backgrounds and CSS were modified.
+
+
+2.6.0a43 changes:
+- Replaced Permissions Manager 'Show Notifications' icon with the user-supplied green speaker icon.
+- Replaced main toolbar Copy icon with the user-supplied overlapping-pages icon.
+- Replaced main toolbar Paste icon with the user-supplied paste icon.
+- Extracted the circular red center from the user-supplied download icon and used it as the new main toolbar Download icon.
+- Updated both large and small toolbar sprites.
+
+
+2.6.0a44 changes:
+- Corrected the main toolbar sprite replacement for Download, Copy, and Paste.
+- Cleared the original toolbar cells before inserting the new icons, so no parts of the old icons remain visible.
+- Permissions Manager Show Notifications icon remains updated from a43.
+
+
+2.6.0a45 changes:
+- Fixed primary toolbar Download, Copy and Paste: updated active Noia Warm sprite images in chrome/browser/nmoptions/icons/warm.
+- nmoptions/warm.css overrides standard toolbar sprite variables with !important, explaining why a44 had no visual effect.
+- Kept the default sprite changes from a44 as fallback; all other 16 slots of the active warm sprites remain unchanged.
+- Retained the updated Permissions Manager Show Notifications icon from a44.
+
+
+2.6.0a46 changes:
+- Enlarged the custom main toolbar Download icon.
+- Updated both active warm toolbar sprites and fallback browser toolbar sprites.
+- Copy, Paste, and Permissions Manager notifications icon remain unchanged from a45.
+
+
+2.6.0a47 changes:
+- Replaced the main toolbar Download icon with a completely redrawn glossy circular icon based on the approved proposal.
+- Implemented the new design in both active warm toolbar sprites and fallback browser toolbar sprites.
+- Kept the visual size close to the approved proposal and aligned it to the existing Copy/Paste icons.
+- Other icons remain unchanged from a46.
+
+
+2.6.0a48 changes:
+- Changed the Linux #appmenu-toolbar-button background from Noia blue to warm red (#98332F).
+- Hover uses #c6524b and pressed/open #6e1f1c; warm red border added.
+- Kept the glossy overlay, shape, branding image, arrow and separate private-browsing styling intact.
+- All toolbar and permissions icons preserved from a47.
+
+
+2.6.0a49 changes:
+- Slightly enlarged the custom Download toolbar icon.
+- Moved it 1 px right and 1 px down to prevent the appearance of top-left clipping.
+- Updated both active warm toolbar sprites and fallback browser toolbar sprites.
+
+
+2.6.0a50 changes:
+- Replaced only the main toolbar Download icon with the user-approved flat crimson icon (red circular rim, white arrow with curved central cutout).
+- Preserved the a49 icon sizes (48px large and 38px small) and position (+1px right/down).
+- Updated active Noia Warm toolbar sprites plus fallback browser sprites, leaving all other toolbar cells untouched.
+
+
+2.6.0a51 changes:
+- Replaced the main toolbar Download icon with the user-revised red emblem featuring a separated white top circle and lower arrow.
+- Preserved the user-edited artwork, removed only the screenshot background, and antialiased the transparent silhouette.
+- Maintained a49/a50 placement and size (48px large, 38px small).
+- Updated both active warm and fallback browser toolbar sprite sheets; all other icons unchanged.
+
+
+2.6.0a52 changes:
+- Slightly enlarged the custom Download toolbar icon for better visual balance.
+- Large toolbar icon increased from 48 px to 50 px.
+- Small toolbar icon increased from 38 px to 40 px.
+- Updated both active warm toolbar sprites and fallback browser toolbar sprites.
+
+
+2.6.0a53 changes:
+- Library/Places folder icons replaced with the uploaded warm red folder icon.
+- Library left tree and right list/tree hover and selection rows changed from blue to warm yellow-beige.
+- Updated both base places icons and warm icon variants to keep Library/Places consistent.
+
+
+2.6.0a54 changes:
+- Fixed Library Downloads richlist selection, previously still blue in allDownloadsViewOverlay.css.
+- Replaced Library Show-in-Folder icons inside the browser/downloads/buttons.png sprite.
+- Added explicit normal and hover/active icons to Library downloads and browser Downloads panel.
+- Added user-supplied real open-folder counterpart instead of synthesized brighter closed-folder icon.
+- Kept all previous changes from 2.6.0a53.
+
+
+2.6.0a55 changes:
+- Replaced the blue 32x32 tab-strip New Tab icon at chrome/browser/tabbrowser/newtab.png.
+- The replacement is a 32x32 rendering of the existing warm New Tab toolbar icon (slot 9).
+- No other UI styling, sprites, or icons were changed.
+
+
+2.6.0a56 changes:
+- Fixed the Software Installation (xpinstallConfirm.xul) dialog's remaining Noia Moon gray background.
+- Replaced its gray radial background with #ffffe6.
+- Applied warm colors to installed-item list, URL underlay, separator/borders and button-footer gradient.
+- Limited all styling changes to chrome/mozapps/xpinstall/xpinstallConfirm.css.
+
+
+2.6.0a58 changes:
+- Add-ons Manager category Extension icon replaced with the uploaded warm box icon.
+- Add-ons Manager category Plugin icon replaced with the uploaded box+plug icon.
+- pluginGeneric-16 updated to match the new plugin icon for better consistency.
+- Build based on confirmed functional 2.6.0a56.
+
+
+2.6.0a59 changes:
+- Bundled 8 folder color sets (red default, yellow, violet, orange, grey, green, cyan, blue), each in 16, 32 and 48 px, closed/open.
+- Kept every nmoptions file, all existing style assets and the existing default folder images unchanged.
+- Palette paths: chrome/browser/nmoptions/icons/folders/<color>/<size>/{closed,open}.png.
+- No style or visual changes in the theme; pairs intended for Noia Warm Moon Options 2.1.2a1.
+
+
+2.6.0a60 changes:
+- Replaced the opaque-looking translucent black background of #allTabs-panel with solid warm #ffffe6.
+- Changed the panel text to dark brown-black and border to warm gold, suppressing inherited dark-panel text shadow.
+- Kept panel geometry and all existing options/folder palettes unchanged.
+
+Licensing clarification, 2026-11-05: Maintainer supplied the original Noia Warm KDE 0.95 licence, readme and changelog by Carlitus. The KDE icon set is explicitly GNU GPL-licensed and may be ported under GPL terms. Earlier uncertainty about this original KDE source has been resolved. This does not automatically cover separate GNOME / WindowBlinds donor assets; inspect docs/LICENSING_REVIEW.md. Original gpl.txt remains to be checked.

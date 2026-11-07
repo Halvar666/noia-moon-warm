@@ -1,0 +1,62 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#navigator-toolbox toolbar,
+#browser-bottombox toolbar {
+  border: none !important;
+}
+
+#main-window:not(:-moz-lwtheme):not([tabsintitlebar])[tabsontop="false"] toolbox {
+  border-top: none !important;
+}
+
+@media all and (-moz-windows-compositor) {
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -20px !important;
+    margin-top: 9px !important;
+  }
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 8px !important;
+  }
+}
+
+@media not all and (-moz-windows-compositor) {
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -20px !important;
+    margin-top: 9px !important;
+  }
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 10px !important;
+  }
+}
+
+#main-window[inFullscreen][tabsontop="true"] .tabs-closebutton {
+  margin-top: 2px !important;
+}
+
+#main-window[inFullscreen][tabsintitlebar] .tabs-closebutton {
+  margin-top: 1px !important;
+}
+
+#main-window[inFullscreen] #toolbar-menubar[autohide="false"] ~ #TabsToolbar .tabs-closebutton {
+  margin-top: 1px !important;
+}
+
+#main-window[nmblack="true"][inFullscreen] #toolbar-menubar[autohide="false"] ~ #TabsToolbar .tabs-closebutton {
+  margin-top: 3px !important;
+}
+
+#main-window[inFullscreen][nmstrip="true"][tabsontop="true"] .tabs-closebutton {
+  margin-top: 0px !important;
+}
+
+#main-window[inFullscreen][nmstrip="true"][tabsintitlebar] .tabs-closebutton {
+  margin-top: 0px !important;
+}
+
+#main-window[inFullscreen][nmstrip="true"] #toolbar-menubar[autohide="false"] ~ #TabsToolbar .tabs-closebutton {
+  margin-top: 0px !important;
+}
+
+#main-window[nmdarwin="true"][inFullscreen] ~ #TabsToolbar .tabs-closebutton {
+  margin-top: 4px !important;
+}

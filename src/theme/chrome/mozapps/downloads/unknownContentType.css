@@ -1,0 +1,31 @@
+
+#from {
+  margin-top: 1px; 
+}
+
+#location {
+  font-weight: bold;
+}
+
+#contentTypeImage {
+  height: 16px;
+  width: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 5px;
+}
+
+.small-indent {
+  margin-inline-start: 15px; 
+  margin-inline-end: 15px;
+}
+
+.small-indent label {
+  margin-inline-start: 0px; 
+}
+
+menulist > .menulist-label-box {
+  margin-inline-start: 9px;
+}
+

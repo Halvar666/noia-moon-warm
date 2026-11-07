@@ -1,0 +1,202 @@
+:root {
+  --tab-strip-border-colors: #946c3b #d8be86 #e4d0a5 #e4d0a5 #f4e7bc #f4e7bc;
+}
+
+:root[nmblack="true"] {
+  --tab-strip-border-colors: #483122 #806141 #9b764e #b38d5b #c8a875 #dec18f;
+}
+
+#navigator-toolbox[tabsontop=true] > #nav-bar {
+  border-top: none !important;
+}
+
+#main-window[sizemode="normal"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar:not([multibar]),
+#main-window[sizemode="maximized"]:not([tabsintitlebar]) #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar:not([multibar]),
+#TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) {  
+  border-bottom: 5px solid !important;
+  -moz-border-bottom-colors: var(--tab-strip-border-colors) !important;
+}
+
+#main-window[nmstrip="true"][nmrdtab="false"] #TabsToolbar:not([multibar]) .tabbrowser-tab,
+#TabsToolbar:not([multibar]) .tabbrowser-tab[style*="background-image"] {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+#TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tab {
+  margin-bottom: -2px !important;
+}
+
+#main-window[tabsintitlebar] #TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tab {
+  margin-top: 3px !important;
+}
+
+#main-window[nmblack="false"] #TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tab[selected="true"] {
+  border-bottom: 0px solid !important;
+  background: #98332F !important;
+}
+ 
+#main-window[nmsolid="false"][nmblack="false"] #TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tabs:not([useUnreadBGColor]):not([useOtherBGColor]):not([highlightCurrent]):not([highlightUnread]):not([highlightRead]):not([highlightUnloaded]):not([highlightSelected]):not([highlightProtected]):not([highlightLocked]) > .tabbrowser-tab:not([style*="background-image"]):not([selected="true"]):not(:hover),
+#main-window[nmsolid="false"][nmblack="false"] #TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tabs[useUnreadBGColor]:not([useOtherBGColor]) > .tabbrowser-tab[visited]:not([style*="background-image"]):not([selected="true"]):not(:hover) {
+  background: rgba(255,255,255,0.7) !important; 
+}
+ 
+#main-window[nmblack="false"] #TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tab:not([selected="true"]):hover {
+  background: #f4e7bc !important; 
+}
+
+@media all and (-moz-windows-compositor) {
+  #main-window[tabsintitlebar]:not([multibar]) #TabsToolbar {
+    margin-top: 0px !important;
+  }
+
+  #main-window[tabsintitlebar]:not([inFullscreen])[nmnormal="true"]:not([multibar]) #TabsToolbar {
+    margin-top: -27px !important;
+  }
+
+  #main-window[tabsintitlebar] #appmenu-button {
+    margin-top: -4px !important;
+  }
+
+  #main-window[inFullscreen] .tabs-closebutton {
+    margin-top: 0px !important;
+  }
+   
+   #main-window[inFullscreen] #toolbar-menubar[autohide="false"] ~ #TabsToolbar .tabs-closebutton {
+    margin-top: 0px !important;
+  }
+   
+   #TabsToolbar:not([multibar]) .tabs-alltabs-button {
+    margin-top: 3px !important;
+  }
+}
+
+@media not all and (-moz-windows-compositor) {
+  #main-window[tabsintitlebar] #TabsToolbar {
+    margin-top: 0px !important;
+  }
+
+  #main-window[tabsintitlebar]:not([inFullscreen])[nmnormal="true"]:not([multibar]) #TabsToolbar {
+    margin-top: -27px !important;
+  }
+
+  #main-window[tabsintitlebar] #appmenu-button {
+    margin-top: -2px !important;
+  }
+
+  #TabsToolbar .tabs-closebutton {
+    margin-top: 0px !important;
+  }
+
+  #main-window[inFullscreen] .tabs-closebutton {
+    margin-top: 0px !important;
+  }
+
+  #TabsToolbar:not([multibar]) #tabview-button {
+    margin-top: -1px !important;
+  }
+
+  #main-window[tabsintitlebar] #TabsToolbar:not([multibar]) #tabview-button {
+    margin-top: -4px !important;
+  }
+
+  #TabsToolbar:not([multibar]) #new-tab-button {
+    margin-bottom: 4px !important;
+  }
+
+  #TabsToolbar:not([multibar]) .tabs-alltabs-button {
+    margin-top: 3px !important;
+  }
+}
+
+#main-window[tabsontop=true] #TabsToolbar #appmenu-button {
+  margin-top: 0px !important;
+  margin-bottom: -1px !important;
+}
+
+#main-window[tabsintitlebar] #TabsToolbar #appmenu-button {
+  margin-top: 1px !important;
+  margin-bottom: -1px !important;
+}
+
+#main-window[tabsontop=false] #TabsToolbar #appmenu-button {
+  margin-top: 0px !important;
+  margin-bottom: -1px !important;
+}
+
+#TabsToolbar:not([multibar]) #tabview-button {
+  margin-top: 1px !important;
+  margin-bottom: -2px !important;
+}
+
+#TabsToolbar[inFullscreen]:not([multibar]) #tabview-button {
+  margin-top: 2px !important;
+  margin-bottom: 0px !important;
+}
+
+#main-window[tabsintitlebar] #TabsToolbar:not([multibar]) #tabview-button {
+  margin-top: -1px !important;
+  margin-bottom: -2px !important;
+}
+
+#TabsToolbar[multibar] #tabview-button {
+  margin-top: 0px !important;
+}
+
+#TabsToolbar #new-tab-button {
+  margin-bottom: 2px !important;
+}
+
+#colorfulTabsStack {
+  display: none !important;
+}
+
+tab.tabbrowser-tab .tab-text.tab-label {
+  text-shadow: none !important;
+}
+
+#TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tab[selected="true"]  .tab-close-button {
+  margin-top: 0px !important;
+}
+
+#TabsToolbar:not([treestyletab-mode="vertical"]):not([multibar]) .tabbrowser-tab[selected="true"] .tab-icon-image {
+  margin-top: -2px !important;
+}
+
+@media all and (-moz-windows-compositor) {
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -24px !important;
+    margin-top: 9px !important;
+  }
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 8px !important;
+  }
+  #main-window[tabsalwaysintitlebar][nmnoline="true"][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -24px !important;
+    margin-top: 8px !important;
+  }
+  #main-window[tabsalwaysintitlebar][nmnoline="true"][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 7px !important;
+  }
+}
+
+@media not all and (-moz-windows-compositor) {
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 10px !important;
+  }
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -24px !important;
+    margin-top: 8px !important;
+  }
+  #main-window[tabsalwaysintitlebar][nmnoline="true"][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 9px !important;
+  }
+  #main-window[tabsalwaysintitlebar][nmnoline="true"][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -24px !important;
+    margin-top: 7px !important;
+  }
+}
+
+#main-window[nmdarwin="true"][inFullscreen] ~ #TabsToolbar .tabs-closebutton {
+  margin-top: 4px !important;
+}

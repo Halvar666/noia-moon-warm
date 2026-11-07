@@ -1,0 +1,225 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== textbox.css ==================================================
+  == Styles used by the XUL textbox element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: textbox ::::: */
+
+textbox {
+  -moz-appearance: none;
+  cursor: text;
+  margin: 2px 4px;
+  border: 1px solid;
+  -moz-border-top-colors: #909090;
+  -moz-border-right-colors: #c0c0c0;
+  -moz-border-bottom-colors: #c0c0c0;
+  -moz-border-left-colors: #c0c0c0;
+  padding: 2px 2px 3px;
+  padding-inline-start: 4px;
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+#urlbar  {
+  border-inline-start : 0px;
+}
+
+textbox[focused="true"]  {
+  border: 1px solid #60B4E0;
+  background-color: white;
+}
+
+textbox:-moz-any(#urlbar, .searchbar-textbox) {
+  background-color: #f2f2f2;
+  border: 1px solid #909090;
+  border-radius: 9.5pt;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+}
+
+textbox:-moz-any(#urlbar, .searchbar-textbox)[focused="true"] {
+  border: 1px solid #707070;
+  background-color: #f6f6f6;
+}
+
+html|*.textbox-input, 
+html|*.textbox-textarea {
+  margin: 0px !important;
+  border: none !important;
+  padding: 0px !important;
+  background-color: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+.textbox-contextmenu {
+  cursor: default;
+}
+
+/* ..... readonly state ..... */
+
+textbox[readonly="true"] {
+  color : #000;
+  background-color: #f8f8f8;
+}
+
+/* ..... disabled state ..... */
+
+textbox[disabled="true"] {
+  cursor: default;
+  color: #aaa;
+  background-color: #ffffe6;
+  border: 1px solid #bebebe;
+}
+
+/* ::::: plain textbox ::::: */
+
+textbox.plain {
+  -moz-appearance: none !important;
+  background-color: transparent;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+}
+
+/* ::::: search textbox ::::: */
+
+textbox[type=search] {
+  border-radius: 9.5pt;
+  border: 1px solid #909090;
+  padding : 2px 4px;
+  padding-inline-start: 9px;
+}
+
+textbox[type=search][focused="true"]  {
+  background-color: white;
+}
+
+.textbox-search-icon {
+  width: 16px;
+  height: 16px;
+  list-style-image: url(chrome://browser/skin/Searchbar.png);
+  -moz-image-region: rect(0 16px 16px 0);
+}
+
+.textbox-search-icon:-moz-locale-dir(rtl) {
+  transform: scaleX(-1);
+}
+
+.textbox-search-icon[searchbutton]:not([disabled]) {
+  cursor: pointer;
+}
+
+.textbox-search-icon[searchbutton]:not([disabled]):hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.textbox-search-icon[searchbutton]:not([disabled]):hover:active {
+  -moz-image-region: rect(0, 48px, 16px, 32px);
+}
+
+.textbox-search-clear {
+  list-style-image: url(chrome://global/skin/icons/close.png);
+  width: 16px;
+}
+
+.textbox-search-clear:not([disabled]) {
+  cursor: default;
+}
+
+.textbox-search-clear:not([disabled]):hover {
+  filter: saturate(150%) brightness(110%);
+}
+
+.textbox-search-clear:not([disabled]):hover:active {
+  filter: brightness(75%);
+  transform: scale(.75);
+}
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > .textbox-input-box > html|*.textbox-input {
+  visibility: hidden;
+}
+
+textbox html|*.textbox-input::-moz-placeholder {
+  font-style: italic;
+  opacity: 1; 
+  color: grey;
+}
+
+textbox html|*.textbox-input:-moz-placeholder {     	/* à supprimer qd on sera à TB24 */
+  font-style: italic;
+  opacity: 1; 
+  color: grey;
+}
+
+
+
+
+textbox:not(.plain),
+textbox[type="search"],
+textbox:-moz-any(#urlbar, .searchbar-textbox) {
+  background-color: #ffffe6 !important;
+  color: #000 !important;
+  border-color: #b89b55 !important;
+  -moz-border-top-colors: #b89b55 !important;
+  -moz-border-right-colors: #d8be86 !important;
+  -moz-border-bottom-colors: #d8be86 !important;
+  -moz-border-left-colors: #b89b55 !important;
+}
+
+textbox:not(.plain)[focused="true"],
+textbox[type="search"][focused="true"],
+textbox:-moz-any(#urlbar, .searchbar-textbox)[focused="true"] {
+  background-color: #fff8e6 !important;
+  color: #000 !important;
+  border-color: #8f7333 !important;
+  -moz-border-top-colors: #8f7333 !important;
+  -moz-border-right-colors: #b89b55 !important;
+  -moz-border-bottom-colors: #b89b55 !important;
+  -moz-border-left-colors: #8f7333 !important;
+}
+
+textbox[readonly="true"]:not(.plain) {
+  background-color: #fff9d6 !important;
+  color: #000 !important;
+}
+
+textbox[disabled="true"]:not(.plain) {
+  background-color: #f2e7bf !important;
+  color: #8a7b57 !important;
+  border-color: #c8b579 !important;
+}
+
+textbox > .textbox-input-box,
+textbox .textbox-input-box,
+textbox .autocomplete-textbox-container,
+textbox .private-autocomplete-textbox-container,
+textbox .urlbar-input-box {
+  background-color: transparent !important;
+}
+
+html|*.textbox-input,
+html|*.textbox-textarea,
+html|*.menulist-editable-input,
+html|*.numberbox-input,
+html|*.datetimepicker-input {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+textbox html|*.textbox-input::-moz-placeholder,
+textbox html|*.textbox-input:-moz-placeholder {
+  color: #8a7b57 !important;
+}

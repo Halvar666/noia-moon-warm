@@ -1,0 +1,49 @@
+/* Noia Warm Moon Options: yellow Bookmarks Sidebar folders (opt-in) */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@-moz-document url("chrome://browser/content/bookmarks/bookmarksPanel.xul") {
+  treechildren::-moz-tree-image(title, container),
+  treechildren::-moz-tree-image(title, query, folder) {
+    list-style-image: url("chrome://browser/skin/nmoptions/icons/folders/yellow/16/closed.png") !important;
+    -moz-image-region: auto !important;
+  }
+  treechildren::-moz-tree-image(title, open),
+  treechildren::-moz-tree-image(title, container, open),
+  treechildren::-moz-tree-image(title, query, folder, open) {
+    list-style-image: url("chrome://browser/skin/nmoptions/icons/folders/yellow/16/open.png") !important;
+    -moz-image-region: auto !important;
+  }
+}
+
+/* Noia Warm Moon Options a2: Library / Places.
+ * Limit changes to actual bookmark folders; do not recolor downloads,
+ * History, Tags, live bookmarks or the organizer's special categories.
+ */
+@-moz-document url-prefix("chrome://browser/content/places/") {
+  #placeContent treechildren::-moz-tree-image(title, container),
+  #placesList treechildren::-moz-tree-image(title, query, folder) {
+    list-style-image: url("chrome://browser/skin/nmoptions/icons/folders/yellow/16/closed.png") !important;
+    -moz-image-region: auto !important;
+  }
+  #placeContent treechildren::-moz-tree-image(title, container, open),
+  #placesList treechildren::-moz-tree-image(title, query, folder, open) {
+    list-style-image: url("chrome://browser/skin/nmoptions/icons/folders/yellow/16/open.png") !important;
+    -moz-image-region: auto !important;
+  }
+}
+
+/* Noia Warm Moon Options a2: Bookmarks Toolbar.
+ * Exclude Places query containers and livemarks. Download Manager's
+ * buttons are separate controls and are intentionally untouched.
+ */
+@-moz-document url("chrome://browser/content/browser.xul") {
+  #PersonalToolbar .bookmark-item[container]:not([query]):not([livemark]),
+  #PlacesToolbarItems .bookmark-item[container]:not([query]):not([livemark]) {
+    list-style-image: url("chrome://browser/skin/nmoptions/icons/folders/yellow/16/closed.png") !important;
+    -moz-image-region: auto !important;
+  }
+  #PersonalToolbar .bookmark-item[container][open]:not([query]):not([livemark]),
+  #PlacesToolbarItems .bookmark-item[container][open]:not([query]):not([livemark]) {
+    list-style-image: url("chrome://browser/skin/nmoptions/icons/folders/yellow/16/open.png") !important;
+    -moz-image-region: auto !important;
+  }
+}

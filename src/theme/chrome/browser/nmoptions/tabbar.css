@@ -1,0 +1,49 @@
+#main-window:not([tabsintitlebar]) #TabsToolbar{
+  background: transparent !important;
+}
+
+#main-window[tabsintitlebar][nmnormal="false"]:not(:-moz-lwtheme) #TabsToolbar {
+  background: url("chrome://browser/skin/titlebar.png") #CDCFD5 !important;
+}
+
+#main-window[tabsintitlebar]:-moz-lwtheme #TabsToolbar {
+  background: transparent !important;
+}
+
+#main-window[tabsintitlebar]:not(:-moz-lwtheme) #TabsToolbar[multibar] {
+  background-size: auto 100% !important;
+}
+
+#main-window[sizemode="normal"][nmstrip="true"][nmnoline="false"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar:not([multibar]) {  
+  border: none !important;
+  border-top: 2px groove #999 !important;
+  border-bottom: 5px solid !important;
+  -moz-border-bottom-colors: #946c3b #d8be86 #e4d0a5 #e4d0a5 #f4e7bc #f4e7bc  !important;
+}
+
+@media all and (-moz-windows-compositor) {
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #titlebar-buttonbox {
+    margin-bottom: -20px !important;
+    margin-top: 9px !important;
+  }
+  #main-window[tabsalwaysintitlebar][tabsontop=true][sizemode="normal"] #appmenu-button {
+    margin-top: 8px !important;
+  }
+}
+
+#main-window:-moz-lwtheme tab {
+  color: inherit !important;
+}
+
+#main-window:-moz-lwtheme tab[selected="true"],
+#main-window:-moz-lwtheme tab:hover {
+  color: #000 !important;
+}
+
+.tabbrowser-tab:not([style*="background-image"])  {
+border: 1px solid rgba(0,0,0,.4) !important;
+}
+
+#main-window[nmbottom="true"] #TabsToolbar {
+	background-image: linear-gradient(#F6F7F7, #B7B9C5, #F6F7F7) !important;
+}

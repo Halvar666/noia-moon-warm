@@ -1,0 +1,59 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+
+#noiamoon-back-forward-dropmarker {
+  display: none;
+}
+.text-link {
+	text-decoration:none;
+	font-weight:bold;
+	color:blue;
+	cursor: pointer;
+}
+
+.text-link :hover {
+	text-decoration:underline;
+}
+
+#noiamoon-toolbar-button {
+  list-style-image: url("noiamoon.png");
+}
+
+#noiamoon-toolbar-button > .toolbarbutton-icon {
+  width: 32px;
+  padding: 0px !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+#noiamoon-toolbar-button:not([disabled="true"]):hover:not(:active) > .toolbarbutton-icon {
+  filter: saturate(150%) brightness(110%);
+  transform: scale(.75);
+}
+
+#noiamoon-toolbar-button[disabled="true"] > .toolbarbutton-icon {
+  filter: grayscale(1);
+  opacity: .3;
+}
+
+#noiamoon-toolbar-button:not([disabled="true"]):hover:active > .toolbarbutton-icon {
+  filter: brightness(75%);
+  transform: scale(.75);
+}
+
+toolbar[iconsize="small"] #noiamoon-toolbar-button {
+  list-style-image: url("noiamoon-small.png");
+}
+
+toolbar[iconsize="small"] #noiamoon-toolbar-button > .toolbarbutton-icon {
+  width: 24px;
+}
+
+#TabsToolbar #noiamoon-toolbar-button > .toolbarbutton-icon,
+#PersonalToolbar #noiamoon-toolbar-button > .toolbarbutton-icon,
+menubar #noiamoon-toolbar-button > .toolbarbutton-icon,
+#addon-bar #noiamoon-toolbar-button > .toolbarbutton-icon {
+  width: 16px;
+}

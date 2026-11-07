@@ -1,0 +1,21 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.up {
+  min-width: 0;
+  list-style-image:url(chrome://global/skin/arrow/arrow-up.png);
+}
+
+.down {
+  min-width: 0;
+  list-style-image:url(chrome://global/skin/arrow/arrow-down.png);
+}
+
+.left {
+  min-width: 0;
+  list-style-image:url(chrome://global/skin/arrow/arrow-left.png);
+}
+
+.right {
+  min-width: 0;
+  list-style-image:url(chrome://global/skin/arrow/arrow-right.png);
+}

@@ -1,0 +1,58 @@
+html {
+  font: message-box;
+  height: 100%;
+  padding: 0 1em;
+  background: url(chrome://global/skin/icons/box-background.png) repeat-x bottom fixed #ffffe6;
+}
+
+body {
+  position: relative;
+  min-width: 330px;
+  max-width: 50em;
+  margin: 4em auto;
+  padding: 3em;
+  padding-left: 30px;
+  color: #000;
+  border: 1px solid #808080;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #404040;
+}
+
+.aboutPageWideContainer {
+  max-width: 80%;
+}
+
+#aboutLogoContainer {
+  width: 300px;
+  margin-bottom: 2em;
+  margin: 0 auto;
+}
+
+h1 {
+  text-shadow: #a0a0a0 1px 1px 0;
+}
+
+img {
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  margin-left: 1.5em;
+  padding: 0;
+  list-style: square;
+}
+
+ul > li {
+  margin-top: .5em;
+}
+
+th, td {
+  padding: 0 5px;
+}
+
+.columns {
+  -moz-column-width: 20em;
+  -moz-column-gap: 3em;
+}

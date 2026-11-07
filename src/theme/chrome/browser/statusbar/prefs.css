@@ -1,0 +1,61 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#status4evar-prefs > prefpane > vbox.content-box {
+	min-height: 18em !important;
+}
+
+radio[pane="status4evar-pane-status"] {
+	list-style-image: url("chrome://global/skin/icons/information-32.png");
+}
+
+radio[pane="status4evar-pane-progress"] {
+	list-style-image: url("chrome://browser/skin/statusbar/prefs-progress.png");
+}
+
+radio[pane="status4evar-pane-download"] {
+	list-style-image: url("chrome://browser/skin/statusbar/prefs-download.png");
+}
+
+radio[pane="status4evar-pane-addonbar"] {
+	list-style-image: url("chrome://browser/skin/statusbar/prefs-statusbar.png");
+}
+
+radio[pane="status4evar-pane-advanced"] {
+	list-style-image: url("chrome://browser/skin/preferences/advanced.png");
+}
+
+
+
+
+
+#status4evar-prefs > prefpane > vbox.content-box {
+  background: #ffffe6 !important;
+  background-color: #ffffe6 !important;
+  background-image: none !important;
+}
+
+
+/* Noia Warm Moon a65: Status Bar Preferences swatch synchronization.
+ * Status-4-Evar's historic defaults are still blue (#333399 / #3366FF)
+ * and gray (#808080) in the colorpicker's anonymous SVG image.
+ * The status indicators use the warm palette via dynamic.css.
+ * Apply pixel-color transforms ONLY when the swatch still contains the old
+ * defaults. As soon as a different color is chosen, this selector stops
+ * matching, so the colorpicker displays that selected color normally.
+ * The SVG filters preserve black outlines and alpha.
+ * No stored preferences or other colorpickers are changed.
+ */
+.colorpicker-button-colorbox[src*="%23333399"],
+.colorpicker-button-colorbox[src*="%233366FF"] {
+  filter: url("chrome://browser/skin/statusbar/download-preview-filters.svg#active-3366ff") !important;
+}
+.colorpicker-button-colorbox[src*="%23333399"] {
+  filter: url("chrome://browser/skin/statusbar/download-preview-filters.svg#active-333399") !important;
+}
+.colorpicker-button-colorbox[src*="%23808080"] {
+  filter: url("chrome://browser/skin/statusbar/download-preview-filters.svg#paused-808080") !important;
+}
