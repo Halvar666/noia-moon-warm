@@ -2,7 +2,7 @@
 
 Warm-toned complete theme for **Pale Moon**, based on **Noia Moon** by Lootyhoof and classic Noia/Noia Warm artwork. This repository also contains a separately installable **Noia Moon Warm Options** extension.
 
-> **Public beta candidate (`1.0.0b1` theme / `2.1.2a8` Options test build).** This archive is for preparation and testing. **The original Noia Warm KDE 0.95 icon set includes its author-supplied GNU GPL notice and the full GNU GPL version 2 (June 1991) text; other imported graphics and Options code still require final provenance/licence review before publishing the complete bundle.**
+> **Public beta candidate (`1.0.0b1` theme / `2.1.2a9` Options test build).** This archive is for preparation and testing. **The original Noia Warm KDE 0.95 icon set includes its author-supplied GNU GPL notice and the full GNU GPL version 2 (June 1991) text; MPL 2.0 covers the maintained source code and GPLv2 is retained for inherited Noia Warm icon artwork.**
 
 ## Features
 
@@ -25,13 +25,13 @@ The theme's `install.rdf` declares Pale Moon **29.3.0–35.*** and the Options e
 - If **Noia Moon** is active, enable the original **Noia Moon Options** and disable **Noia Moon Warm Options**.
 - Restart Pale Moon after changing the theme or enabling/disabling either Options add-on. Preserve installed add-ons and their preferences; no uninstall is necessary.
 
-This is a **temporary beta limitation**, not an automatic restriction enforced by the extensions. The warning appears on the Main tab of Warm Options a8 and in its Add-ons Manager description. See `docs/OPTIONS_COEXISTENCE_AUDIT.md`.
+This is a **temporary beta limitation**, not an automatic restriction enforced by the extensions. The warning appears on the Main tab of Warm Options a9 and in its Add-ons Manager description. See `docs/OPTIONS_COEXISTENCE_AUDIT.md`.
 
 Install the theme XPI in Pale Moon, activate it, then restart. Optionally install the Options XPI, restart, and select any non-default palette explicitly. The `Default (Noia Warm Moon)` option leaves the theme's standard colours unchanged. The Black palette remains marked **Experimental** because some dialogs may still have contrast problems.
 
 ## Windows titlebar
 
-On Windows with the menu bar hidden, the theme provides a warm gold/beige titlebar without requiring the Options extension. The optional **Use Windows titlebar** checkbox changes the titlebar styling to follow the Windows appearance (including the system accent where supported). Both ordinary and maximized windows were successfully tested on Windows with the a74 + a6 reference pairing. The a7 Options release changed **only the wording** of this checkbox; a8 adds the coexistence warning without changing checkbox behavior.
+On Windows with the menu bar hidden, the theme provides a warm gold/beige titlebar without requiring the Options extension. The optional **Use Windows titlebar** checkbox changes the titlebar styling to follow the Windows appearance (including the system accent where supported). Both ordinary and maximized windows were successfully tested on Windows with the a74 + a6 reference pairing. The a7 Options release changed **only the wording** of this checkbox; a8 added the coexistence warning and a9 updated the startup component and add-on icon.
 
 ## Layout
 
@@ -54,19 +54,9 @@ Build locally with `python3 scripts/build.py all` and verify with `python3 scrip
 
 ## Licensing
 
-**Primary project licence: Mozilla Public License 2.0 (MPL-2.0).** The project retains the upstream licence for inherited MPL-covered theme and Options sources. The small number of exceptions currently documented in this repository is:
+**Current project licences:** [MPL 2.0](LICENSES/MPL-2.0.txt) for the theme/Options source code and [GNU GPL version 2](LICENSES/GPL-2.0.txt) for Noia Warm KDE-derived icon artwork. Original author notices and the KDE GPLv2 text remain in `docs/upstream/Noia_Warm_KDE_0.95/`. This does not relabel inherited GPL artwork as MPL.
 
-| Material | Licence text | Why it remains |
-| --- | --- | --- |
-| Noia Moon-derived theme and original MPL-covered work | [MPL 2.0](LICENSES/MPL-2.0.txt) | Primary licence |
-| Noia Warm KDE 0.95-derived icons | [GNU GPL v2](LICENSES/GPL-2.0.txt) | The original author released the icon set under GNU GPL and supplied this text; it is not relabelled MPL |
-| Inherited Stylish-derived portion of the separately installable Options extension | [GNU GPL v3](LICENSES/GPL-3.0.txt) | Preserved original notice in `src/options/chrome/components/noiamoonop.js` |
-
-**This is three licence texts across the entire source repository, not three licences that every file carries.** The theme and the optional extension are separately installed packages. Original KDE author notices and GPL wording are retained at `docs/upstream/Noia_Warm_KDE_0.95/`; these are evidence, not additional licences.
-
-MPL 2.0's compatibility with GPL/LGPL under section 3.3 does **not** relicense original GPL-only material as MPL-only. No additional LGPL licence is claimed solely from historical correspondence. We do not add the MPL notice *Incompatible With Secondary Licenses* to our MPL-covered contributions.
-
-For a possible future reduction to two licence texts, the inherited GPLv3 component in Options would need to be replaced with an independently written implementation or relicensed with the necessary permission; this is **not** part of the beta candidate. Unresolved ownership/provenance for other artwork remains under review and is not cured by the short licence list. See [licensing audit](docs/LICENSING_REVIEW.md).
+In Options a9, an independently authored MPL-2.0 startup component replaced the older source containing a Stylish/GPLv3 notice. The former GPLv3 source is no longer part of the active project. We retain historical provenance notes in [the licensing review](docs/LICENSING_REVIEW.md).
 
 ### Removed archival Phoenix assets (a62)
 
@@ -75,4 +65,10 @@ The unreferenced `nmoptions/icons/warm/jar-donor/` files have been removed from 
 
 ## Beta packaging note (2026-11-07)
 
-The **theme** is packaged as `Noia Moon Warm 1.0.0b1` with a new user-edited 64×64 Add-ons Manager icon and the exact supplied `preview.png`. Its stable installation ID (`noia-warm-moon@halvar666`) and skin internal name (`noiawarmmoon`) remain unchanged to preserve upgrades and compatibility. The separate **Options** add-on is still `Noia Warm Moon Options 2.1.2a8` and has not been renamed or released as a beta in this package. Its compatibility warning about the original Noia Moon Options remains in effect. The theme beta is a **candidate** until final licensing review and installation tests are complete.
+The **theme** is packaged as `Noia Moon Warm 1.0.0b1` with a new user-edited 64×64 Add-ons Manager icon and the exact supplied `preview.png`. Its stable installation ID (`noia-warm-moon@halvar666`) and skin internal name (`noiawarmmoon`) remain unchanged to preserve upgrades and compatibility. The separate **Options** add-on is now `Noia Warm Moon Options 2.1.2a9` with an independently rewritten startup controller and a maintainer-approved icon, but has not been publicly released. Its compatibility warning about the original Noia Moon Options remains in effect. The theme beta remains a candidate pending final packaging and release acceptance.
+
+## Current source updates (2026-11-07)
+
+- **Theme 1.0.0b1:** Four 9×9 tree-expander arrows now use warm colors instead of the remaining blue tint; other theme artwork is unchanged.
+- **Options 2.1.2a9:** MPL-2.0 startup component, maintainer-selected 64×64 Add-ons Manager icon, unchanged preferences and registration, and retained warning not to run both Options extensions at once. The maintainer reported no visible regressions in Pale Moon 35 on Linux.
+- Builds remain separate XPI packages; no GitHub release or tag has been created yet.

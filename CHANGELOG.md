@@ -1,5 +1,17 @@
 # Changelog
 
+## Options 2.1.2a9 — startup modernization and new icon (2026-11-07)
+- **Changed:** Independently rewrote the XPCOM startup component under MPL-2.0, replacing the historical Stylish-labelled implementation.
+- **Changed:** Added the maintainer-approved warm Options icon (64×64 PNG).
+- **Preserved:** Existing add-on ID, XPCOM registration, preference names, palettes, and compatibility warning for original Noia Moon Options.
+- **Tested:** 13 Node/XPCOM mock tests passed; maintainer reported no regressions in Pale Moon 35 on Linux.
+- **Status:** Source update only; no public Release or tag.
+
+## Theme 1.0.0b1 — warm sidebar arrows (2026-11-07)
+- **Fixed:** Recolored four 9×9 tree expand/collapse arrow images to the warm red-brown palette.
+- **Unchanged:** Theme version and remaining assets.
+
+
 ## Noia Moon Warm 1.0.0b1 — public beta candidate (2026-11-07)
 - **Changed:** Public-facing theme name to **Noia Moon Warm**; version reset to `1.0.0b1`.
 - **Changed:** Add-ons Manager icon replaced by the final warm-toned custom gold emblem supplied/approved by the maintainer.

@@ -27,3 +27,7 @@ A common, theme-aware Options manager could support both complete themes, but is
 `install.rdf`: version increment and descriptive compatibility notice.  
 `NOIA_WARM_OPTIONS_TEST_NOTES.txt`: installation guidance.  
 No changed runtime JavaScript, CSS, preferences or graphics.
+
+## Options a9 status (2026-11-07)
+
+The independently rewritten startup component and new Add-ons Manager icon do not remove the original extension's global stylesheet and overlapping overlay-ID conflicts. The rule of enabling only the matching Options extension remains unchanged.

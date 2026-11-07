@@ -9,7 +9,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>noia-warm-moon-options@halvar666</em:id>
-    <em:version>2.1.2a8</em:version>
+    <em:version>2.1.2a9</em:version>
     <em:name>Noia Warm Moon Options</em:name>
     <em:description>Optional customization for Noia Warm Moon. Incompatible with simultaneously enabled original Noia Moon Options: disable one and restart Pale Moon.</em:description>
     <em:creator>Lootyhoof</em:creator>

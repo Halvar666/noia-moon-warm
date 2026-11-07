@@ -1,9 +1,9 @@
-# Release checklist — Noia Moon Warm 1.0.0b1 candidate / Options 2.1.2a8
+# Release checklist — Noia Moon Warm 1.0.0b1 candidate / Options 2.1.2a9
 
 - [x] Windows: titlebar normal/maximized, default gold palette and optional system-color mode verified with a74 + a6 (2026-11-07).
 - [x] Theme contains no `jar-donor` subtree (removed in a62).
-- [x] Options a8: static verification of warning text; no JS/CSS changes.
-- [ ] Options a8: verify compatibility notice and confirm normal behavior with original Noia Moon Options disabled.
+- [x] Options a9: independently rewritten startup, 13 automated tests, and no regression reported during Pale Moon 35 Linux smoke test.
+- [x] Options a9: coexistence warning retained; original Noia Moon Options disabled during testing.
 - [ ] Linux: visual regression test of Theme a74 vs a67 (Windows-only changes must not affect Linux).
 - [ ] Complete provenance/licence verification for the remaining non-KDE assets before public distribution.
 - [x] Check inherited CSS skin references: 47 occurrences present unchanged since Noia Moon 2.6.1; no new missing references in a74.
@@ -13,7 +13,7 @@
 
 
 - [ ] Resolve Noia Warm / Noia graphics redistribution permissions and record all third-party attributions.
-- [ ] Check inherited GPLv3 Stylish component in Options, include required notices and source.
+- [x] Replace the historically Stylish-labelled Options startup component with an independent MPL-2.0 implementation.
 - [ ] Confirm user-created replacement graphics provenance and redistribution terms.
 - [ ] Install-test Theme a74 with Options a7 on Pale Moon 35.x; a74 with a6 already tested on Windows.
 - [ ] Verify **Default** and **Reset** do not activate legacy grey styles, including after an upgrade.
@@ -23,7 +23,7 @@
 - [ ] Test Add-ons Manager, permissions, Preferences, Page Info, Library and downloads.
 - [ ] Check Black palette contrast; keep Experimental label until comprehensive regression test.
 - [ ] Test Windows and Linux as available; Windows titlebar ordinary/maximized confirmed with a74/a6; still smoke-test a7 and full Linux regression.
-- [ ] Decide whether to publish theme and Options in one repo or separate repos.
+- [x] Maintain both theme and Options sources in this repository.
 - [ ] Update identifiers and release version numbers if needed; build public beta packages from final sources.
 - [ ] Tag beta (suggest `theme-v2.6.0b1` and `options-v2.1.2b1` if using one repo).
 - [ ] Publish README, screenshot(s), release notes, source code and verified licence details.

@@ -36,7 +36,7 @@ Noia Moon (Lootyhoof) is listed on the Pale Moon Add-ons site as **Mozilla Publi
 
 ## 4. Noia Warm Moon Options
 
-The Options fork derives from Noia Moon Options (Lootyhoof). `chrome/components/noiamoonop.js` contains a notice that a portion came from **Stylish 1.0.8 (GPLv3)**. Preserve this attribution and review what source/code obligations apply. `LICENSES/GPL-3.0.txt` is included for this inherited component; **it is distinct from the original Noia Warm KDE 0.95 licence text (GPL version 2)**. Compatibility and obligations for the separately distributed Options fork still need review.
+Historical note: Options a8 inherited a `noiamoonop.js` header referencing Stylish 1.0.8 (GPLv3). For a9 this controller was independently reimplemented with an MPL-2.0 source identifier. The extra GPLv3 licence text has been removed from the current active project files; older audit comments remain for historical context.
 
 ## 5. Before public beta
 
