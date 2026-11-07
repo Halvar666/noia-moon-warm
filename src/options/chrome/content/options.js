@@ -178,8 +178,8 @@ noiawarmop.options = {
   updateFolderColorStatus: function() {
     var info = document.getElementById("folderColorStatus");
     if (info) info.setAttribute("value", this.isWarmTheme() ?
-      "Active: Noia Warm Moon. Folder colors apply to Bookmarks Sidebar, Library and Bookmarks Toolbar (restart required)." :
-      "Noia Warm Moon must be the active theme. Restart Pale Moon after a theme change.");
+      "Active: Noia Moon Warm. Folder colors apply to Bookmarks Sidebar, Library and Bookmarks Toolbar (restart required)." :
+      "Noia Moon Warm must be the active theme. Restart Pale Moon after a theme change.");
   },
 
   applyFolderColor: function(color) {

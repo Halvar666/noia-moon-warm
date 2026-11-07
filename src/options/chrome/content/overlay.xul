@@ -19,14 +19,14 @@
   </toolbaritem>
   
   <toolbarpalette id="BrowserToolbarPalette">
-		<toolbarbutton id="noiamoon-toolbar-button" class="toolbarbutton-1" label="Noia Warm Moon Options" tooltiptext="Noia Warm Moon Options" oncommand="window.open('chrome://noiawarmoptions/content/options.xul','', 'chrome');"/>
+		<toolbarbutton id="noiamoon-toolbar-button" class="toolbarbutton-1" label="Noia Moon Warm Options" tooltiptext="Noia Moon Warm Options" oncommand="window.open('chrome://noiawarmoptions/content/options.xul','', 'chrome');"/>
 	</toolbarpalette>
   
 	<menupopup id="menu_ToolsPopup">
-		<menuitem id="noiamoonoptions" label="Noia Warm Moon Options" hidden="false" oncommand="window.open('chrome://noiawarmoptions/content/options.xul','', 'chrome');"/>
+		<menuitem id="noiamoonoptions" label="Noia Moon Warm Options" hidden="false" oncommand="window.open('chrome://noiawarmoptions/content/options.xul','', 'chrome');"/>
 	</menupopup>
 
 	<menupopup id="appmenu_customizeMenu">
-		<menuitem id="noiamoonoptions_appmenu_options" insertafter="appmenu_preferences" label="Noia Warm Moon Options" hidden="false" oncommand="window.open('chrome://noiawarmoptions/content/options.xul','', 'chrome');"/>
+		<menuitem id="noiamoonoptions_appmenu_options" insertafter="appmenu_preferences" label="Noia Moon Warm Options" hidden="false" oncommand="window.open('chrome://noiawarmoptions/content/options.xul','', 'chrome');"/>
 	</menupopup>
 </overlay> 

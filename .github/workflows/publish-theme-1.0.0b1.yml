@@ -1,4 +1,4 @@
-name: Publish Noia Moon Warm 1.0.0b1 assets
+name: Sync Noia Moon Warm 1.0.0b1 release assets
 on:
   push:
     branches:

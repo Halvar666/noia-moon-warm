@@ -62,14 +62,14 @@
           <tabpanel id="panemain" orient="vertical">
             <groupbox id="noia-options-compatibility-warning">
               <caption label="Compatibility with Noia Moon Options"/>
-              <description>Do not enable Noia Warm Moon Options and the original Noia Moon Options at the same time. Their XUL overlays and globally loaded styles can conflict.</description>
+              <description>Do not enable Noia Moon Warm Options and the original Noia Moon Options at the same time. Their XUL overlays and globally loaded styles can conflict.</description>
               <description>Both themes may remain installed. Enable only the Options add-on matching the active theme, then restart Pale Moon after switching.</description>
             </groupbox>
             <groupbox>
               <caption label="Theme appearance"/>
-              <description>Default preserves the original Noia Warm Moon appearance. Only explicitly selected palettes change colors; other settings remain independent.</description>
+              <description>Default preserves the original Noia Moon Warm appearance. Only explicitly selected palettes change colors; other settings remain independent.</description>
               <radiogroup id="themeVariantPicker" orient="vertical" oncommand="noiawarmop.options.setThemeVariant(this.value);">
-                <radio label="Default (Noia Warm Moon)" value="default" selected="true"/>
+                <radio label="Default (Noia Moon Warm)" value="default" selected="true"/>
                 <radio label="Bronze" value="bronze"/>
                 <radio label="Soft Rose" value="rose"/>
                 <radio label="Sage Green" value="sage"/>

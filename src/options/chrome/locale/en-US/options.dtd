@@ -2,7 +2,7 @@
 <!ENTITY nmclose "Close">
 <!ENTITY Enable "On">
 <!ENTITY Disable "Off">
-<!ENTITY reset "Restore Noia Warm Moon Options defaults">
+<!ENTITY reset "Restore Noia Moon Warm Options defaults">
 <!ENTITY Alltheme "Themes">
 <!ENTITY DarkEnable "Black theme">
 <!ENTITY DarkDisable "Off">
@@ -101,7 +101,7 @@
 <!ENTITY find.label "Find">
 <!ENTITY find.tooltip "Find text (Ctrl+F)">
 <!ENTITY Button "Button">
-<!ENTITY NoiaMoonOptions "Noia Warm Moon Options">
+<!ENTITY NoiaMoonOptions "Noia Moon Warm Options">
 <!ENTITY Contrib "Contributors: Noia icon set by Carlitus, Noia 2 Extreme theme by Kasteo (Kongkeat Kuatrakull)">
 <!ENTITY Contrib2 "Noia Moon options is an adaptation from the Noia 4 theme configurator by Aris">
 <!ENTITY backForwardMenu.tooltip "Recent pages">
