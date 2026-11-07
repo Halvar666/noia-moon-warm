@@ -52,9 +52,21 @@ Build locally with `python3 scripts/build.py all` and verify with `python3 scrip
 - **Vyacheslav Dikonov** — Noia Warm GNOME 2 port (verified from the original 2003–2004 `ChangeLog`; official GNOME Art archive and matching SHA-256 are documented in `docs/LICENSING_REVIEW.md`).
 - **Halvar666** — Noia Moon Warm adaptations and project maintenance; additional theme graphics.
 
-The upstream KDE icon set's original `gpl.txt` is retained verbatim in `docs/upstream/Noia_Warm_KDE_0.95/` (with an additional copy in `LICENSES/GPL-2.0.txt`). `LICENSES/GPL-3.0.txt` is present for a separately inherited Options component, not as the KDE icons' licence.
+## Licensing
 
-See `docs/LICENSING_REVIEW.md` for the verified KDE GPL source evidence and remaining provenance questions for other artwork and inherited Options code.
+**Primary project licence: Mozilla Public License 2.0 (MPL-2.0).** The project retains the upstream licence for inherited MPL-covered theme and Options sources. The small number of exceptions currently documented in this repository is:
+
+| Material | Licence text | Why it remains |
+| --- | --- | --- |
+| Noia Moon-derived theme and original MPL-covered work | [MPL 2.0](LICENSES/MPL-2.0.txt) | Primary licence |
+| Noia Warm KDE 0.95-derived icons | [GNU GPL v2](LICENSES/GPL-2.0.txt) | The original author released the icon set under GNU GPL and supplied this text; it is not relabelled MPL |
+| Inherited Stylish-derived portion of the separately installable Options extension | [GNU GPL v3](LICENSES/GPL-3.0.txt) | Preserved original notice in `src/options/chrome/components/noiamoonop.js` |
+
+**This is three licence texts across the entire source repository, not three licences that every file carries.** The theme and the optional extension are separately installed packages. Original KDE author notices and GPL wording are retained at `docs/upstream/Noia_Warm_KDE_0.95/`; these are evidence, not additional licences.
+
+MPL 2.0's compatibility with GPL/LGPL under section 3.3 does **not** relicense original GPL-only material as MPL-only. No additional LGPL licence is claimed solely from historical correspondence. We do not add the MPL notice *Incompatible With Secondary Licenses* to our MPL-covered contributions.
+
+For a possible future reduction to two licence texts, the inherited GPLv3 component in Options would need to be replaced with an independently written implementation or relicensed with the necessary permission; this is **not** part of the beta candidate. Unresolved ownership/provenance for other artwork remains under review and is not cured by the short licence list. See [licensing audit](docs/LICENSING_REVIEW.md).
 
 ### Removed archival Phoenix assets (a62)
 
