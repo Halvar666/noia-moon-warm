@@ -1,3 +1,5 @@
+![Noia Moon Warm preview](src/theme/preview.png)
+
 # Noia Moon Warm
 
 Warm-toned complete theme for **Pale Moon**, based on **Noia Moon** by Lootyhoof and classic Noia/Noia Warm artwork. This repository also contains a separately installable **Noia Moon Warm Options** extension.
