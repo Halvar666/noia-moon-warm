@@ -4,7 +4,7 @@
 
 Warm-toned complete theme for **Pale Moon**, based on **Noia Moon** by Lootyhoof and classic Noia/Noia Warm artwork. This repository also contains a separately installable **Noia Moon Warm Options** extension.
 
-> **Public beta candidate (`1.0.0b1` theme / `2.1.2a9` Options test build).** This archive is for preparation and testing. **The original Noia Warm KDE 0.95 icon set includes its author-supplied GNU GPL notice and the full GNU GPL version 2 (June 1991) text; MPL 2.0 covers the maintained source code and GPLv2 is retained for inherited Noia Warm icon artwork.**
+> **Public beta candidate (`1.0.0b1` theme / `1.0.0b1` separate Options beta).** This archive is for preparation and testing. **The original Noia Warm KDE 0.95 icon set includes its author-supplied GNU GPL notice and the full GNU GPL version 2 (June 1991) text; MPL 2.0 covers the maintained source code and GPLv2 is retained for inherited Noia Warm icon artwork.**
 
 ## Features
 
@@ -67,10 +67,10 @@ The unreferenced `nmoptions/icons/warm/jar-donor/` files have been removed from 
 
 ## Beta packaging note (2026-11-07)
 
-The **theme** is packaged as `Noia Moon Warm 1.0.0b1` with a new user-edited 64×64 Add-ons Manager icon and the exact supplied `preview.png`. Its stable installation ID (`noia-warm-moon@halvar666`) and skin internal name (`noiawarmmoon`) remain unchanged to preserve upgrades and compatibility. The separate **Options** add-on is now `Noia Warm Moon Options 2.1.2a9` with an independently rewritten startup controller and a maintainer-approved icon, but has not been publicly released. Its compatibility warning about the original Noia Moon Options remains in effect. The theme beta remains a candidate pending final packaging and release acceptance.
+The **theme** is packaged as `Noia Moon Warm 1.0.0b1` with a new user-edited 64×64 Add-ons Manager icon and the exact supplied `preview.png`. Its stable installation ID (`noia-warm-moon@halvar666`) and skin internal name (`noiawarmmoon`) remain unchanged to preserve upgrades and compatibility. The separate **Options** add-on is now **Noia Moon Warm Options 1.0.0b1**, with an independently rewritten startup controller and a maintainer-approved icon; it is distributed separately on the forum and is not part of the theme's GitHub Release. Its compatibility warning about the original Noia Moon Options remains in effect. The theme is distributed as a GitHub prerelease; Options is distributed separately.
 
 ## Current source updates (2026-11-07)
 
 - **Theme 1.0.0b1:** Four 9×9 tree-expander arrows now use warm colors instead of the remaining blue tint; other theme artwork is unchanged.
-- **Options 2.1.2a9:** MPL-2.0 startup component, maintainer-selected 64×64 Add-ons Manager icon, unchanged preferences and registration, and retained warning not to run both Options extensions at once. The maintainer reported no visible regressions in Pale Moon 35 on Linux.
-- Builds remain separate XPI packages; no GitHub release or tag has been created yet.
+- **Options 1.0.0b1:** MPL-2.0 startup component, maintainer-selected 64×64 Add-ons Manager icon, unchanged preferences and registration, and retained warning not to run both Options extensions at once. The maintainer reported no visible regressions in Pale Moon 35 on Linux.
+- Builds remain separate XPI packages; the theme is the only XPI attached to the GitHub Release.

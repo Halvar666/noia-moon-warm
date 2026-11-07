@@ -1,5 +1,10 @@
 # Changelog
 
+## Noia Moon Warm 1.0.0b1 — first public beta
+- **Released:** Complete theme as GitHub prerelease `theme-v1.0.0b1` (theme XPI only).
+- **Distribution:** Noia Moon Warm Options 1.0.0b1 is distributed separately through the forum, with a Pale Moon Add-ons listing planned later.
+- **Preserved:** Theme and Options are independently installable; all existing identifiers and preferences remain unchanged.
+
 ## Options 2.1.2a9 — startup modernization and new icon (2026-11-07)
 - **Changed:** Independently rewrote the XPCOM startup component under MPL-2.0, replacing the historical Stylish-labelled implementation.
 - **Changed:** Added the maintainer-approved warm Options icon (64×64 PNG).

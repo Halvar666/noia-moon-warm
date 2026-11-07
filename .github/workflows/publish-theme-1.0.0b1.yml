@@ -1,0 +1,34 @@
+name: Publish Noia Moon Warm Theme 1.0.0b1
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-theme-1.0.0b1.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: github.repository == 'Halvar666/noia-moon-warm'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release sources
+        uses: actions/checkout@v4
+      - name: Build the theme XPI
+        run: python3 scripts/build.py theme
+      - name: Verify the exact reviewed theme package
+        run: echo '6794b4a18e736c2d38e237fb02081b605876e3a229cdb93a4892c4fc43126302  dist/Noia_Moon_Warm_1.0.0b1.xpi' | sha256sum -c -
+      - name: Create GitHub prerelease (theme only)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view theme-v1.0.0b1 >/dev/null 2>&1; then
+            echo 'Theme release already exists; not recreating.'
+            exit 0
+          fi
+          gh release create theme-v1.0.0b1 dist/Noia_Moon_Warm_1.0.0b1.xpi \
+            --title 'Noia Moon Warm 1.0.0b1' \
+            --notes-file docs/RELEASE_NOTES_THEME_1.0.0b1.md \
+            --prerelease \
+            --target "$GITHUB_SHA"

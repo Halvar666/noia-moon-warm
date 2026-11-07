@@ -1,4 +1,4 @@
-# Release checklist — Noia Moon Warm 1.0.0b1 candidate / Options 2.1.2a9
+# Release checklist — Noia Moon Warm 1.0.0b1 candidate / Options 1.0.0b1
 
 - [x] Windows: titlebar normal/maximized, default gold palette and optional system-color mode verified with a74 + a6 (2026-11-07).
 - [x] Theme contains no `jar-donor` subtree (removed in a62).

@@ -1,4 +1,4 @@
-Noia Moon Warm Options 2.1.2a9 — test build (2026-11-07)
+Noia Moon Warm Options 1.0.0b1 — forum beta (2026-11-07)
 
 - The startup XPCOM component was independently rewritten and now uses an MPL-2.0 notice.
 - The maintainer's 64x64 warm icon is used for the Add-ons Manager.
@@ -10,3 +10,5 @@ Both complete themes may stay installed. Enable only the Options add-on matching
 the active theme, then restart Pale Moon. Neither Options must uninstall the other.
 
 Theme 1.0.0b1 also fixes the four formerly blue tree-expander PNG assets.
+
+This Options XPI is distributed separately on the forum and is not attached to the theme's GitHub Release.
