@@ -1,0 +1,30 @@
+name: Windows titlebar alignment test build
+on:
+  push:
+    branches:
+      - fix/windows-titlebar-appmenu-centering-test
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out test branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build test theme
+        run: python3 scripts/build.py theme
+      - name: Install image validation dependency
+        run: python3 -m pip install Pillow
+      - name: Verify XPI structure and resources
+        run: python3 scripts/verify.py
+      - name: Calculate SHA-256
+        run: sha256sum dist/Noia_Moon_Warm_1.0.0b2a1_windows-titlebar-test.xpi
+      - name: Upload test XPI
+        uses: actions/upload-artifact@v4
+        with:
+          name: noia-moon-warm-windows-titlebar-test
+          path: dist/Noia_Moon_Warm_1.0.0b2a1_windows-titlebar-test.xpi
+          if-no-files-found: error
+          retention-days: 14
