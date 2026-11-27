@@ -363,3 +363,23 @@
   -moz-box-align: center !important;
 }
 
+/* ===== Windows titlebar app-menu alignment test =====
+ * Pale Moon places #appmenu-button-container and
+ * #titlebar-buttonbox-container side by side inside #titlebar-content.
+ * Give the row its intended height and center both controls vertically.
+ * This prevents the app-menu button and caption glyphs from sitting against
+ * the top edge when the app-menu button is shown.
+ */
+#main-window:not([tabsintitlebar]):not([inFullscreen]) > #titlebar > #titlebar-content {
+  min-height: 26px;
+  -moz-box-align: center;
+}
+
+#main-window:not([tabsintitlebar]):not([inFullscreen]) #titlebar-buttonbox-container {
+  -moz-box-align: center !important;
+}
+
+#main-window:not([tabsintitlebar]):not([inFullscreen]) #titlebar-buttonbox {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

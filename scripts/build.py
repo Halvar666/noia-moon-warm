@@ -3,7 +3,7 @@
 from pathlib import Path
 import sys, zipfile
 ROOT=Path(__file__).resolve().parent.parent
-SOURCES={"theme": ("src/theme", "Noia_Moon_Warm_1.0.0b1.xpi"),
+SOURCES={"theme": ("src/theme", "Noia_Moon_Warm_1.0.0b2a1_windows-titlebar-test.xpi"),
          "options": ("src/options", "Noia_Moon_Warm_Options_1.0.0b1.xpi")}
 def build(name):
     sub,filename=SOURCES[name]
